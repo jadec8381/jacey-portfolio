@@ -1,9 +1,15 @@
 "use client";
 import React, { useState, useEffect } from "react"
+// 🌟 第一步：引入 Link 组件
+import Link from "next/link"
+// 🌟 第二步：引入 usePathname 来实现“当前页面高亮” (可选)
+import { usePathname } from "next/navigation"
 
 export default function GlobalNavBar() {
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    // 🌟 第三步：获取当前路径
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -159,20 +165,29 @@ export default function GlobalNavBar() {
             <div className="global-nav-wrapper">
                 <div className="nav-grid">
                     <div className="nav-col">
-                        <div className="nav-logo">
+                        {/* 🌟 回首页：点击 Logo 回到 / */}
+                        <Link href="/" className="nav-logo">
                             <span className="square"></span>JACEY CHEN
-                        </div>
+                        </Link>
                     </div>
                     <div className="nav-col">
                         <ul className="nav-links">
                             <li>
-                                <a href="#">Product</a>
+                                {/* 🌟 链接到 /products 文件夹 */}
+                                <Link href="/products" className={pathname === "/products" ? "active" : ""}>
+                                    Product
+                                </Link>
                             </li>
                             <li>
-                                <a href="#">Visual</a>
+                                {/* 🌟 链接到 /visuals 文件夹 */}
+                                <Link href="/visuals" className={pathname === "/visuals" ? "active" : ""}>
+                                    Visual
+                                </Link>
                             </li>
                             <li>
-                                <a href="#">About</a>
+                                <Link href="/about" className={pathname === "/about" ? "active" : ""}>
+                                    About
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -196,24 +211,28 @@ export default function GlobalNavBar() {
             <div className={`mobile-menu-overlay ${isMenuOpen ? "open" : ""}`}>
                 <ul className="mobile-nav-links">
                     <li>
-                        <a href="#" onClick={toggleMenu}>
+                        {/* 🌟 链接到 / 根目录 */}
+                        <Link href="/" onClick={toggleMenu}>
                             Home
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" onClick={toggleMenu}>
+                        {/* 🌟 链接到 /products 文件夹 */}
+                        <Link href="/products" onClick={toggleMenu}>
                             Product
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" onClick={toggleMenu}>
+                        {/* 🌟 链接到 /visuals 文件夹 */}
+                        <Link href="/visuals" onClick={toggleMenu}>
                             Visual
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" onClick={toggleMenu}>
+                        {/* 🌟 链接到 /about 文件夹 */}
+                        <Link href="/about" onClick={toggleMenu}>
                             About
-                        </a>
+                        </Link>
                     </li>
                 </ul>
                 <div className="mobile-nav-footer">
