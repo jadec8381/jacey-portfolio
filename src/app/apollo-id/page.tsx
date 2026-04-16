@@ -622,13 +622,13 @@ export default function Page() {
             {/* ══════════════════════════════
                 NEXT PROJECT
                 ══════════════════════════════ */}
-            <a href="#" className="pd-next scroll-reveal">
+            <Link href="/sanvo-website" className="pd-next scroll-reveal">
                 <div>
                     <div className="pd-next-label">Next Project</div>
                     <div className="pd-next-title">SANVO ECOSYSTEM</div>
                 </div>
                 <div className="pd-next-arrow">→</div>
-            </a>
+            </Link>
         </div>
     )
 }

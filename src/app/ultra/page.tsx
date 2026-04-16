@@ -478,13 +478,13 @@ export default function Page() {
             </section>
 
             {/* ══════════ NEXT ══════════ */}
-            <a href="#" className="pd-next scroll-reveal">
+            <Link href="/pop-surge" className="pd-next scroll-reveal">
                 <div>
                     <div className="pd-next-label">Next Project</div>
                     <div className="pd-next-title">POP: SURGE</div>
                 </div>
                 <div className="pd-next-arrow">→</div>
-            </a>
+            </Link>
         </div>
     )
 }

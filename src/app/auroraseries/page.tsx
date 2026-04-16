@@ -389,13 +389,13 @@ export default function Page() {
             </section>
 
             {/* ══════════ NEXT ══════════ */}
-            <a href="#" className="pd-next scroll-reveal">
+            <Link href="/ultra" className="pd-next scroll-reveal">
                 <div>
                     <div className="pd-next-label">Next Project</div>
                     <div className="pd-next-title">ULTRA RECORDS</div>
                 </div>
                 <div className="pd-next-arrow">→</div>
-            </a>
+            </Link>
         </div>
     )
 }
