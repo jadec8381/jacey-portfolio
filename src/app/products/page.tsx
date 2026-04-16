@@ -220,7 +220,7 @@ export default function Page() {
 
             <div className="editorial-grid">
                 {/* 01. Featured — SANVO */}
-                <Link href="/sanvo" className="prod-card featured-card scroll-reveal">
+                <Link href="/sanvo-website" className="prod-card featured-card scroll-reveal">
                     <div className="prod-img-wrap">
                         <img
                             src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4ecbe398-9db3-4b40-90fd-721a63e0e9ed/SANVO+-+%E7%9B%91%E4%BF%AE%E4%B8%AD.png"
