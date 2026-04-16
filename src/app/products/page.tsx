@@ -1,5 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react"
+// 🌟 第一步：引入 Link 组件
+import Link from "next/link"
 
 export default function Page() {
     const containerRef = useRef<HTMLDivElement>(null)
@@ -218,7 +220,7 @@ export default function Page() {
 
             <div className="editorial-grid">
                 {/* 01. Featured — SANVO */}
-                <a href="#" className="prod-card featured-card scroll-reveal">
+                <Link href="/sanvo" className="prod-card featured-card scroll-reveal">
                     <div className="prod-img-wrap">
                         <img
                             src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4ecbe398-9db3-4b40-90fd-721a63e0e9ed/SANVO+-+%E7%9B%91%E4%BF%AE%E4%B8%AD.png"
@@ -251,10 +253,10 @@ export default function Page() {
                             Read Project <span>→</span>
                         </div>
                     </div>
-                </a>
+                </Link>
 
                 {/* 02. GRID Gamers */}
-                <a href="#" className="prod-card scroll-reveal">
+                <Link href="/grid-gamers" className="prod-card scroll-reveal">
                     <div
                         className="prod-img-wrap"
                         style={{ aspectRatio: "4/3" }}
@@ -279,10 +281,10 @@ export default function Page() {
                     <div className="read-more">
                         Read Project <span>→</span>
                     </div>
-                </a>
+                </Link>
 
                 {/* 03. Apollo ID */}
-                <a href="#" className="prod-card scroll-reveal">
+                <Link href="/apollo-id" className="prod-card scroll-reveal">
                     <div
                         className="prod-img-wrap"
                         style={{ aspectRatio: "4/3" }}
@@ -308,7 +310,7 @@ export default function Page() {
                     <div className="read-more">
                         Read Project <span>→</span>
                     </div>
-                </a>
+                </Link>
             </div>
         </div>
     )
