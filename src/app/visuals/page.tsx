@@ -354,7 +354,7 @@ export default function Page() {
                     <div className="read-more">
                         View Project <span>→</span>
                     </div>
-                </link>
+                </Link>
             </div>
         </div>
     )
