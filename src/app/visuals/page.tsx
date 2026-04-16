@@ -1,5 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react"
+// 🌟 第一步：引入 Link 组件
+import Link from "next/link"
 
 export default function Page() {
     const containerRef = useRef<HTMLDivElement>(null)
@@ -205,7 +207,7 @@ export default function Page() {
 
             <div className="editorial-grid">
                 {/* 01. Featured — SANVO Campaign Photography */}
-                <a href="#" className="vis-card featured-card scroll-reveal">
+                <Link href="/sanvocampaignphotography" className="prod-card featured-card scroll-reveal">
                     <div className="vis-img-wrap">
                         <img
                             src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/0bc2cd9d-72b5-4544-9583-ad2c8229c952/SANVO2.70275+copy+2.jpg"
@@ -236,10 +238,10 @@ export default function Page() {
                             View Project <span>→</span>
                         </div>
                     </div>
-                </a>
+                </Link>
 
                 {/* 02. Aurora Series */}
-                <a href="#" className="vis-card scroll-reveal">
+                <Link href="/auroraseries" className="prod-card featured-card scroll-reveal">
                     <div
                         className="vis-img-wrap"
                         style={{ aspectRatio: "4/3" }}
@@ -265,10 +267,11 @@ export default function Page() {
                     <div className="read-more">
                         View Project <span>→</span>
                     </div>
-                </a>
+                </Link>
 
                 {/* 03. Ultra Records */}
-                <a href="#" className="vis-card scroll-reveal">
+                <Link href="/ultra" className="prod-card featured-card scroll-reveal">
+
                     <div
                         className="vis-img-wrap"
                         style={{ aspectRatio: "4/3" }}
@@ -294,10 +297,10 @@ export default function Page() {
                     <div className="read-more">
                         View Project <span>→</span>
                     </div>
-                </a>
+                </Link>
 
                 {/* 04. POP: Surge */}
-                <a href="#" className="vis-card scroll-reveal">
+                <Link href="/pop-surge" className="prod-card featured-card scroll-reveal">
                     <div
                         className="vis-img-wrap"
                         style={{ aspectRatio: "4/3" }}
@@ -322,10 +325,10 @@ export default function Page() {
                     <div className="read-more">
                         View Project <span>→</span>
                     </div>
-                </a>
+                </Link>
 
                 {/* 05. 4D6 Esports Wellness — 普通 grid card */}
-                <a href="#" className="vis-card scroll-reveal">
+                <Link href="/4d6" className="prod-card featured-card scroll-reveal">
                     <div
                         className="vis-img-wrap"
                         style={{ aspectRatio: "4/3" }}
@@ -351,7 +354,7 @@ export default function Page() {
                     <div className="read-more">
                         View Project <span>→</span>
                     </div>
-                </a>
+                </Link>
             </div>
         </div>
     )
