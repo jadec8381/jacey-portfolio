@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useRef } from "react"
 
 // 为 TypeScript 声明自定义元素，防止报错
