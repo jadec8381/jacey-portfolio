@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react"
 
-export default function VisualList() {
+export default function Page() {
     const containerRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {

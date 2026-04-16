@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react"
 
-export default function ApolloDetail() {
+export default function Page() {
     const containerRef = useRef<HTMLDivElement>(null)
     const [activeSection, setActiveSection] = useState({
         num: "01",

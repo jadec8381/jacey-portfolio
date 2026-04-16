@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react"
 
-export default function About() {
+export default function Page() {
     const containerRef = useRef<HTMLDivElement>(null)
 
     // 滚动渐显动画监听
