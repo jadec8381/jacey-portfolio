@@ -207,7 +207,7 @@ export default function Page() {
 
             <div className="editorial-grid">
                 {/* 01. Featured — SANVO Campaign Photography */}
-                <Link href="/sanvocampaignphotography" className="prod-card featured-card scroll-reveal">
+                <Link href="/sanvocampaignphotography" className="vis-card featured-card scroll-reveal">
                     <div className="vis-img-wrap">
                         <img
                             src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/0bc2cd9d-72b5-4544-9583-ad2c8229c952/SANVO2.70275+copy+2.jpg"
@@ -241,7 +241,7 @@ export default function Page() {
                 </Link>
 
                 {/* 02. Aurora Series */}
-                <Link href="/auroraseries" className="prod-card featured-card scroll-reveal">
+                <Link href="/auroraseries" className="vis-card scroll-reveal">
                     <div
                         className="vis-img-wrap"
                         style={{ aspectRatio: "4/3" }}
@@ -270,7 +270,7 @@ export default function Page() {
                 </Link>
 
                 {/* 03. Ultra Records */}
-                <Link href="/ultra" className="prod-card featured-card scroll-reveal">
+                <Link href="/ultra" className="vis-card scroll-reveal">
 
                     <div
                         className="vis-img-wrap"
@@ -300,7 +300,7 @@ export default function Page() {
                 </Link>
 
                 {/* 04. POP: Surge */}
-                <Link href="/pop-surge" className="prod-card featured-card scroll-reveal">
+                <Link href="/pop-surge" className="vis-card scroll-reveal">
                     <div
                         className="vis-img-wrap"
                         style={{ aspectRatio: "4/3" }}
@@ -328,7 +328,7 @@ export default function Page() {
                 </Link>
 
                 {/* 05. 4D6 Esports Wellness — 普通 grid card */}
-                <Link href="/4d6" className="prod-card featured-card scroll-reveal">
+                <Link href="/4d6" className="vis-card scroll-reveal">
                     <div
                         className="vis-img-wrap"
                         style={{ aspectRatio: "4/3" }}
@@ -354,7 +354,7 @@ export default function Page() {
                     <div className="read-more">
                         View Project <span>→</span>
                     </div>
-                </Link>
+                </link>
             </div>
         </div>
     )
