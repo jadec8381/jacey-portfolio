@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react"
+import Link from "next/link"
 
 export default function Page() {
     const containerRef = useRef<HTMLDivElement>(null)
