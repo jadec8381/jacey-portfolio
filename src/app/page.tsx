@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 // @ts-nocheck
 import React, { useEffect, useRef } from "react"
 
@@ -352,17 +353,16 @@ export default function PortfolioHome() {
                 <div className="meta-row"><span className="mk">Tools</span><span className="mv">Gemini AI, Figma</span></div>
               </div>
             </div>
-            <a href="/sanvo-ecosystem" className="proj-link">View Project <span>→</span></a>
+            <Link href="/sanvo-website" className="proj-link">View Project <span>→</span></Link>
           </div>
           <div className="proj-img-wrap">
-            {/* TODO: 替换成 Framer CDN URL */}
             <img src="/images/sanvo/website-hero.webp" alt="SANVO" />
           </div>
         </div>
 
         {/* 02 + 03 row */}
         <div className="proj-row">
-          <div className="proj-card" data-scroll>
+          <Link href="/grid-gamers" className="proj-card" data-scroll>
             <div className="pc-img">
               <img src="/images/grid/grid-hero.webp" alt="GRID" />
             </div>
@@ -374,8 +374,8 @@ export default function PortfolioHome() {
                 <div className="pc-tags"><span className="pc-tag">AI</span><span className="pc-tag">LLM</span><span className="pc-tag">Design System</span></div>
               </div>
             </div>
-          </div>
-          <div className="proj-card" data-scroll>
+          </Link>
+          <Link href="/apollo-id" className="proj-card" data-scroll>
             <div className="pc-img">
               <img src="/images/apollo/apollo-hero01.png" alt="Apollo" />
             </div>
@@ -387,7 +387,7 @@ export default function PortfolioHome() {
                 <div className="pc-tags"><span className="pc-tag">UX</span><span className="pc-tag">UI</span></div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
 
@@ -417,7 +417,7 @@ export default function PortfolioHome() {
                 <div className="meta-row"><span className="mk">Format</span><span className="mv">Advertising Image Campaigns</span></div>
               </div>
             </div>
-            <a href="/sanvo-art-direction" className="proj-link">View Project <span>→</span></a>
+            <Link href="/sanvo-art-direction" className="proj-link">View Project <span>→</span></Link>
           </div>
           <div className="proj-img-wrap">
             <img src="/images/sanvo/photography-digi01.jpg" alt="SANVO Campaign" />
@@ -426,7 +426,7 @@ export default function PortfolioHome() {
 
         {/* 02 + 03: Aurora + Ultra */}
         <div className="proj-row">
-          <div className="proj-card" data-scroll>
+          <Link href="/aurora-series" className="proj-card" data-scroll>
             <div className="pc-img">
               <img src="/images/aurora/aurora-hero01.png" alt="Aurora Series" />
             </div>
@@ -438,8 +438,8 @@ export default function PortfolioHome() {
                 <div className="pc-tags"><span className="pc-tag">Brand Identity</span><span className="pc-tag">Visual Lead</span></div>
               </div>
             </div>
-          </div>
-          <div className="proj-card" data-scroll>
+          </Link>
+          <Link href="/ultra-records" className="proj-card" data-scroll>
             <div className="pc-img">
               <img src="/images/ultra/ultra-hero.webp" alt="Ultra Records" />
             </div>
@@ -451,12 +451,12 @@ export default function PortfolioHome() {
                 <div className="pc-tags"><span className="pc-tag">Music</span><span className="pc-tag">Album Art</span></div>
               </div>
             </div>
-          </div>
+          </Link >
         </div>
 
         {/* 04 + 05: POP Surge + 4D6 */}
         <div className="proj-row rev">
-          <div className="proj-card" data-scroll>
+          <Link href="/pop-surge" className="proj-card" data-scroll>
             <div className="pc-img">
               <img src="/images/popsurge/pop-poster7.png" alt="POP Surge" />
             </div>
@@ -468,8 +468,8 @@ export default function PortfolioHome() {
                 <div className="pc-tags"><span className="pc-tag">Branding</span><span className="pc-tag">Award Winner</span></div>
               </div>
             </div>
-          </div>
-          <div className="proj-card" data-scroll>
+          </Link >
+          <Link href="/4d6" className="proj-card" data-scroll>
             <div className="pc-img">
               <img src="/images/4d6/4d6-hero.webp" alt="4D6" />
             </div>
@@ -481,15 +481,15 @@ export default function PortfolioHome() {
                 <div className="pc-tags"><span className="pc-tag">Thesis</span><span className="pc-tag">Packaging</span></div>
               </div>
             </div>
-          </div>
+          </Link >
         </div>
-      </section>
+      </section >
 
       <footer>
         <span>Jacey Chen Studio</span>
         <span className="fc">Product & Visual Design</span>
         <span className="fr">NYC ©2026</span>
       </footer>
-    </div>
+    </div >
   )
 }
