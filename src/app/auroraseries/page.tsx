@@ -54,7 +54,6 @@ export default function Page() {
         }
     }, [])
 
-    /* ── 图片占位 URL — 全部替换成你的实际图 ── */
     const PH =
         "https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b98f7989-e113-423f-a37a-39b8cb355134/Aurora-Socials_DC+announcement+-+Linkedin.png"
 
@@ -101,7 +100,86 @@ export default function Page() {
                 .pd-text-content h3 { font-family: 'Oswald', sans-serif; font-size: 28px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
                 .pd-text-content p { font-size: 16px; line-height: 1.6; color: var(--gray-light); margin-bottom: 24px; }
 
-                /* Gallery divider label */
+                /* Stat row */
+                .pd-stat-row {
+                    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+                    border-top: 1px solid var(--rule-lt); border-bottom: 1px solid var(--rule-lt);
+                    padding: 40px 0;
+                }
+                .pd-stat { text-align: center; }
+                .pd-stat .stat-num {
+                    font-family: 'Oswald', sans-serif; font-size: clamp(36px, 4vw, 56px);
+                    font-weight: 700; line-height: 1; margin-bottom: 8px;
+                }
+                .pd-stat .stat-label {
+                    font-family: 'Space Mono', monospace; font-size: 10px;
+                    color: var(--gray-text); text-transform: uppercase; letter-spacing: 1px;
+                }
+
+                /* Sponsor logos row */
+                .pd-sponsors {
+                    border-top: 1px solid var(--rule-lt);
+                    padding-top: 24px;
+                }
+                .pd-sponsors-label {
+                    font-family: 'Space Mono', monospace; font-size: 11px;
+                    text-transform: uppercase; color: var(--gray-text); letter-spacing: 2px;
+                    margin-bottom: 24px;
+                }
+                .pd-sponsors-grid {
+                    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+                    background: var(--rule-lt); border: 1px solid var(--rule-lt);
+                }
+                .pd-sponsor-item {
+                    background: var(--bg); padding: 32px 24px;
+                    display: flex; flex-direction: column; align-items: center;
+                    justify-content: center; gap: 12px;
+                    transition: background 0.3s;
+                }
+                .pd-sponsor-item:hover { background: rgba(255,255,255,0.02); }
+                .pd-sponsor-logo {
+                    height: 32px; opacity: 0.5; filter: brightness(0) invert(1);
+                    transition: opacity 0.3s;
+                }
+                .pd-sponsor-item:hover .pd-sponsor-logo { opacity: 0.8; }
+                .pd-sponsor-name {
+                    font-family: 'Oswald', sans-serif; font-size: 18px;
+                    font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+                    color: rgba(255,255,255,0.4);
+                    transition: color 0.3s;
+                }
+                .pd-sponsor-item:hover .pd-sponsor-name { color: rgba(255,255,255,0.7); }
+                .pd-sponsor-type {
+                    font-family: 'Space Mono', monospace; font-size: 9px;
+                    text-transform: uppercase; letter-spacing: 1.5px;
+                    color: rgba(255,255,255,0.25);
+                }
+
+                /* Timeline milestones */
+                .pd-timeline {
+                    border-top: 1px solid var(--rule-lt); padding-top: 24px;
+                }
+                .pd-timeline-row {
+                    display: grid; grid-template-columns: 120px 1fr;
+                    gap: 24px; padding: 20px 0;
+                    border-bottom: 1px solid var(--rule-lt);
+                    transition: all 0.3s;
+                }
+                .pd-timeline-row:hover { padding-left: 8px; }
+                .pd-timeline-year {
+                    font-family: 'Oswald', sans-serif; font-size: 24px;
+                    font-weight: 700; color: var(--white);
+                }
+                .pd-timeline-label {
+                    font-family: 'Space Mono', monospace; font-size: 10px;
+                    text-transform: uppercase; color: var(--gray-text); letter-spacing: 1px;
+                    margin-bottom: 4px;
+                }
+                .pd-timeline-desc {
+                    font-size: 15px; color: var(--gray-light); line-height: 1.5;
+                }
+
+                /* Gallery */
                 .pd-gallery-label {
                     border-top: 1px solid var(--rule-lt); padding-top: 16px;
                     font-family: 'Space Mono', monospace; font-size: 11px;
@@ -138,6 +216,9 @@ export default function Page() {
                     .pd-body { grid-template-columns: 200px 1fr; gap: 40px; }
                     .pd-text-block { grid-template-columns: 1fr; gap: 16px; }
                     .pd-img-3col { grid-template-columns: 1fr 1fr; }
+                    .pd-stat-row { grid-template-columns: 1fr; gap: 32px; }
+                    .pd-sponsors-grid { grid-template-columns: 1fr; }
+                    .pd-timeline-row { grid-template-columns: 80px 1fr; }
                 }
                 @media (max-width: 768px) {
                     .project-detail-container { padding-top: 100px; }
@@ -166,17 +247,12 @@ export default function Page() {
                 </div>
                 <div className="pd-hero-info">
                     <div className="pd-title-wrap">
-                        <h1>
-                            AURORA
-                            <br />
-                            SERIES
-                        </h1>
+                        <h1>AURORA<br />SERIES</h1>
                         <p className="pd-title-summary">
-                            Visual brand identity for a collegiate Valorant
-                            tournament series dedicated to amplifying
-                            marginalized gender representation in esports —
-                            spanning multi-season graphics, brand guidelines,
-                            and cross-platform social assets.
+                            Built the visual identity from scratch for a collegiate
+                            Valorant tournament series — from zero brand presence to
+                            securing three major sponsors and expanding across two
+                            competitive titles within two seasons.
                         </p>
                     </div>
                     <div className="pd-meta-table">
@@ -186,9 +262,7 @@ export default function Page() {
                         </div>
                         <div className="pd-meta-row">
                             <span className="mk">Role</span>
-                            <span className="mv">
-                                Visual Brand Identity Lead
-                            </span>
+                            <span className="mv">Visual Brand Identity Lead</span>
                         </div>
                         <div className="pd-meta-row">
                             <span className="mk">Duration</span>
@@ -196,15 +270,11 @@ export default function Page() {
                         </div>
                         <div className="pd-meta-row">
                             <span className="mk">Scope</span>
-                            <span className="mv">
-                                Brand Identity, Brand Book, Social Graphics
-                            </span>
+                            <span className="mv">Brand Identity, Brand Book, Social Graphics</span>
                         </div>
                         <div className="pd-meta-row">
                             <span className="mk">Output</span>
-                            <span className="mv">
-                                32+ Graphics Across Multiple Seasons
-                            </span>
+                            <span className="mv">32+ Graphics · 2 Seasons · 2 Titles</span>
                         </div>
                     </div>
                 </div>
@@ -215,9 +285,7 @@ export default function Page() {
                 <div className="pd-sidebar-col">
                     <div className="pd-sidebar-sticky">
                         <div className="pd-sticky-num">{activeSection.num}</div>
-                        <div className="pd-sticky-label">
-                            {activeSection.label}
-                        </div>
+                        <div className="pd-sticky-label">{activeSection.label}</div>
                     </div>
                 </div>
                 <div className="pd-mobile-sticky-bar">
@@ -227,70 +295,142 @@ export default function Page() {
 
                 <div className="pd-content">
                     {/* ── 01: Overview ── */}
-                    <div
-                        className="pd-section"
-                        data-num="01"
-                        data-label="Overview"
-                    >
+                    <div className="pd-section" data-num="01" data-label="Overview">
                         <div className="pd-text-block scroll-reveal">
                             <div className="pd-text-title">Mission</div>
                             <div className="pd-text-content">
                                 <h3>Amplifying Underrepresented Voices</h3>
                                 <p>
-                                    Aurora Series is a collegiate-level Valorant
-                                    tournament dedicated to discovering and
-                                    nurturing talented individuals who identify
-                                    with a marginalized gender — female,
-                                    non-binary, and/or transgender — and aspire
-                                    to break into the esports industry. By
-                                    providing a safe competitive space, Aurora
-                                    serves as a gateway for passionate college
-                                    students into the greater esports scene.
+                                    Aurora Series is a collegiate-level Valorant tournament
+                                    dedicated to discovering and nurturing talented individuals
+                                    who identify with a marginalized gender — female, non-binary,
+                                    and/or transgender — and aspire to break into the esports
+                                    industry. By providing a safe competitive space, Aurora serves
+                                    as a gateway for passionate college students into the greater
+                                    esports scene.
                                 </p>
                             </div>
                         </div>
                         <div className="pd-text-block scroll-reveal">
                             <div className="pd-text-title">Role</div>
                             <div className="pd-text-content">
-                                <h3>Brand Identity Lead</h3>
+                                <h3>Brand Identity Lead — From Zero</h3>
                                 <p>
-                                    Led the development of a comprehensive brand
-                                    book covering color palettes, logo placement
-                                    rules, typeface standards, and visual
-                                    identity guidelines for both internal and
-                                    external stakeholders. Executed all
-                                    tournament graphics to ensure unified,
-                                    high-quality visual output across platforms
-                                    and seasons.
+                                    Joined as founding visual lead to build Aurora's entire brand
+                                    identity from scratch. Developed a comprehensive brand book
+                                    covering color palettes, logo placement rules, typeface
+                                    standards, and visual identity guidelines. Executed all
+                                    tournament graphics across platforms and seasons — the
+                                    visual foundation that would go on to attract major sponsors.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    {/* ── 02: Work ── */}
-                    <div className="pd-section" data-num="02" data-label="Work">
+                    {/* ── 02: Impact ── */}
+                    <div className="pd-section" data-num="02" data-label="Impact">
+                        {/* Stats */}
+                        <div className="pd-stat-row scroll-reveal">
+                            <div className="pd-stat">
+                                <div className="stat-num">3</div>
+                                <div className="stat-label">Major Sponsors Secured</div>
+                            </div>
+                            <div className="pd-stat">
+                                <div className="stat-num">2</div>
+                                <div className="stat-label">Competitive Titles</div>
+                            </div>
+                            <div className="pd-stat">
+                                <div className="stat-num">32+</div>
+                                <div className="stat-label">Graphics Delivered</div>
+                            </div>
+                        </div>
+
+                        {/* Sponsor logos */}
+                        <div className="pd-sponsors scroll-reveal">
+                            <div className="pd-sponsors-label">Year 1 Sponsors</div>
+                            <div className="pd-sponsors-grid">
+                                <div className="pd-sponsor-item">
+                                    {/* TODO: 替换成 Omnic logo — 放 public/images/aurora/sponsors/ */}
+                                    {/* <img src="/images/aurora/sponsors/omnic.svg" alt="Omnic" className="pd-sponsor-logo" /> */}
+                                    <div className="pd-sponsor-name">Omnic</div>
+                                    <div className="pd-sponsor-type">Esports Analytics</div>
+                                </div>
+                                <div className="pd-sponsor-item">
+                                    {/* TODO: 替换成 Xfinity logo */}
+                                    {/* <img src="/images/aurora/sponsors/xfinity.svg" alt="Xfinity" className="pd-sponsor-logo" /> */}
+                                    <div className="pd-sponsor-name">Xfinity</div>
+                                    <div className="pd-sponsor-type">Telecommunications</div>
+                                </div>
+                                <div className="pd-sponsor-item">
+                                    {/* TODO: 替换成 Logitech logo */}
+                                    {/* <img src="/images/aurora/sponsors/logitech.svg" alt="Logitech" className="pd-sponsor-logo" /> */}
+                                    <div className="pd-sponsor-name">Logitech</div>
+                                    <div className="pd-sponsor-type">Gaming Peripherals</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Growth timeline */}
+                        <div className="pd-text-block scroll-reveal">
+                            <div className="pd-text-title">Growth</div>
+                            <div className="pd-text-content">
+                                <h3>Brand-Driven Business Impact</h3>
+                                <p>
+                                    A strong visual identity doesn't just look good — it
+                                    signals legitimacy. Aurora's brand system was instrumental
+                                    in sponsor acquisition: professional, consistent visual
+                                    output across platforms gave the org credibility that
+                                    matched teams years ahead in operating history.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="pd-timeline scroll-reveal">
+                            <div className="pd-timeline-row">
+                                <div className="pd-timeline-year">2023</div>
+                                <div>
+                                    <div className="pd-timeline-label">Year 1 — Launch</div>
+                                    <div className="pd-timeline-desc">
+                                        Founded with zero brand presence. Built complete visual
+                                        identity system from scratch. Launched Valorant tournament.
+                                        Secured Omnic, Xfinity, and Logitech as founding sponsors.
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="pd-timeline-row">
+                                <div className="pd-timeline-year">2024</div>
+                                <div>
+                                    <div className="pd-timeline-label">Year 2 — Expansion</div>
+                                    <div className="pd-timeline-desc">
+                                        Expanded from Valorant to Valorant + Overwatch.
+                                        Scaled graphics output across two competitive titles
+                                        while maintaining brand consistency across all touchpoints.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* ── 03: Work ── */}
+                    <div className="pd-section" data-num="03" data-label="Work">
                         {/* Brand Book */}
                         <div className="pd-text-block scroll-reveal">
                             <div className="pd-text-title">Brand Book</div>
                             <div className="pd-text-content">
                                 <h3>Visual Identity System</h3>
                                 <p>
-                                    A detailed brand book standardizing Aurora's
-                                    visual identity across all touchpoints —
-                                    ensuring consistency and professionalism as
-                                    the tournament scales across multiple
-                                    seasons and platforms.
+                                    A detailed brand book standardizing Aurora's visual
+                                    identity across all touchpoints — the document that
+                                    sponsors and partners received to understand the org's
+                                    visual standards and professionalism.
                                 </p>
                             </div>
                         </div>
 
-                        {/* Brand book pages — full + 2col */}
                         <div className="pd-img-full pd-img-group scroll-reveal">
-                            {/* TODO: brand book cover / spread */}
                             <img src={PH} alt="Brand Book Cover" />
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            {/* TODO: brand book spreads */}
                             <img src={PH} alt="Brand Book Spread 1" />
                             <img src={PH} alt="Brand Book Spread 2" />
                         </div>
@@ -299,19 +439,11 @@ export default function Page() {
                             <img src={PH} alt="Brand Book Spread 4" />
                         </div>
 
-                        {/* ── Graphics Gallery ── */}
+                        {/* Graphics Gallery */}
                         <div className="pd-gallery-label scroll-reveal">
                             <span>Tournament & Social Graphics</span>
                             <span className="pd-gallery-count">32 pieces</span>
                         </div>
-
-                        {/* 
-                            Gallery layout pattern for ~32 images:
-                            full → 3col → 2col → full → 3col → 2col → 3col → full → 2col → 3col
-                            = 1 + 3 + 2 + 1 + 3 + 2 + 3 + 1 + 2 + 3 = 21
-                            + 3col → 2col → 3col → full = 3 + 2 + 3 + 1 = 9
-                            Total placeholder slots: 30 (adjust as needed)
-                        */}
 
                         {/* Batch 1 */}
                         <div className="pd-img-full pd-img-group scroll-reveal">
