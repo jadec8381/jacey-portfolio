@@ -377,7 +377,7 @@ export default function PortfolioHome() {
           </div>
           <div className="proj-card" data-scroll>
             <div className="pc-img">
-              <img src="/images/apollo/apollo-hero.webp" alt="Apollo" />
+              <img src="/images/apollo/apollo-hero01.png" alt="Apollo" />
             </div>
             <div className="pc-over">
               <div className="pc-over-top"><span className="pc-idx">03/</span><span className="pc-arrow">↗</span></div>
@@ -441,7 +441,7 @@ export default function PortfolioHome() {
           </div>
           <div className="proj-card" data-scroll>
             <div className="pc-img">
-              <img src="/images/ultra/ultra-hero01.webp" alt="Ultra Records" />
+              <img src="/images/ultra/ultra-hero.webp" alt="Ultra Records" />
             </div>
             <div className="pc-over">
               <div className="pc-over-top"><span className="pc-idx">03/</span><span className="pc-arrow">↗</span></div>
