@@ -228,7 +228,7 @@ export default function Page() {
             <section className="pd-hero scroll-reveal">
                 <div className="pd-hero-img">
                     <img
-                        src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/d2733603-0d5c-4529-9958-4dc2707f58d3/Apollo+Mock+%281%29.png"
+                        src="/images/apollo/apollo-hero01.png"
                         alt="Apollo ID Project Cover"
                     />
                 </div>
@@ -401,7 +401,7 @@ export default function Page() {
                         <div className="pd-img-full pd-img-group scroll-reveal">
                             {/* TODO: 替换成你的 user flow 截图 */}
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/d2733603-0d5c-4529-9958-4dc2707f58d3/Apollo+Mock+%281%29.png"
+                                src="/images/apollo/apollo-apps05.webp"
                                 alt="Apollo ID User Flow"
                             />
                             <p className="pd-img-caption">
@@ -482,12 +482,12 @@ export default function Page() {
                         <div className="pd-img-2col pd-img-group scroll-reveal">
                             {/* TODO: 替换成 MVP V1 的 screens */}
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/d2733603-0d5c-4529-9958-4dc2707f58d3/Apollo+Mock+%281%29.png"
-                                alt="Apollo MVP V1 Screen 1"
+                                src="/images/apollo/apollo-apps02.webp"
+                                alt="Apollo Concept Screens"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/d2733603-0d5c-4529-9958-4dc2707f58d3/Apollo+Mock+%281%29.png"
-                                alt="Apollo MVP V1 Screen 2"
+                                src="/images/apollo/apollo-apps01.webp"
+                                alt="Apollo MVP V1 Screen 1"
                             />
                         </div>
 
@@ -520,16 +520,16 @@ export default function Page() {
                             {/* TODO: 替换成 MVP V2 的 screens */}
                             <img
                                 className="img-span-full"
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/d2733603-0d5c-4529-9958-4dc2707f58d3/Apollo+Mock+%281%29.png"
-                                alt="Apollo Reiterated Flow"
+                                src="/images/apollo/apollo-apps06.webp"
+                                alt="Apollo Internal Feedback"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/d2733603-0d5c-4529-9958-4dc2707f58d3/Apollo+Mock+%281%29.png"
-                                alt="Apollo HQ Staff View"
+                                src="/images/apollo/apollo-apps03.webp"
+                                alt="Apollo MVP 2 Screen 1"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/d2733603-0d5c-4529-9958-4dc2707f58d3/Apollo+Mock+%281%29.png"
-                                alt="Apollo Deposit Flow"
+                                src="/images/apollo/apollo-apps04.webp"
+                                alt="Apollo MVP 2 Screen 2"
                             />
                         </div>
 
@@ -611,7 +611,7 @@ export default function Page() {
                         <div className="pd-img-full pd-img-group scroll-reveal">
                             {/* TODO: 替换成最终 showcase 截图 */}
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/d2733603-0d5c-4529-9958-4dc2707f58d3/Apollo+Mock+%281%29.png"
+                                src="/images/apollo/apollo-apps01.webp"
                                 alt="Apollo ID Final Showcase"
                             />
                         </div>
