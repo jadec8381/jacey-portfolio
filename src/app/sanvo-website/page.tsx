@@ -471,11 +471,11 @@ export default function Page() {
                         {/* 示范：2-col 等宽双图 */}
                         <div className="pd-img-2col pd-img-group scroll-reveal">
                             <img
-                                src="/image/sanvo/website-wip3.webp"
+                                src="/images/sanvo/website-wip3.webp"
                                 alt="SANVO Visual System 1"
                             />
                             <img
-                                src="/image/sanvo/website-wip4.webp"
+                                src="/images/sanvo/website-wip4.webp"
                                 alt="SANVO Visual System 2"
                             />
                         </div>
