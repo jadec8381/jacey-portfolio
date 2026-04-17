@@ -256,7 +256,7 @@ export default function Page() {
                 </Link>
 
                 {/* 02. GRID Gamers */}
-                <Link href="/grid-gamers" className="prod-card scroll-reveal">
+                <Link href="https://docs.google.com/presentation/d/1kEhP_GZXXueLS4dS7upbL2tpaZa7B8t2RKmyw-3Ll2o/edit?usp=sharing" className="prod-card scroll-reveal">
                     <div
                         className="prod-img-wrap"
                         style={{ aspectRatio: "4/3" }}

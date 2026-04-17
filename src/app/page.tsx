@@ -362,7 +362,7 @@ export default function PortfolioHome() {
 
         {/* 02 + 03 row */}
         <div className="proj-row">
-          <Link href="/grid-gamers" className="proj-card" data-scroll>
+          <Link href="https://docs.google.com/presentation/d/1kEhP_GZXXueLS4dS7upbL2tpaZa7B8t2RKmyw-3Ll2o/edit?usp=sharing" className="proj-card" data-scroll>
             <div className="pc-img">
               <img src="/images/grid/grid-hero.webp" alt="GRID" />
             </div>
