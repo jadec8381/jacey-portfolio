@@ -426,7 +426,7 @@ export default function PortfolioHome() {
 
         {/* 02 + 03: Aurora + Ultra */}
         <div className="proj-row">
-          <Link href="/aurora-series" className="proj-card" data-scroll>
+          <Link href="/auroraseries" className="proj-card" data-scroll>
             <div className="pc-img">
               <img src="/images/aurora/aurora-hero01.png" alt="Aurora Series" />
             </div>
@@ -439,7 +439,7 @@ export default function PortfolioHome() {
               </div>
             </div>
           </Link>
-          <Link href="/ultra-records" className="proj-card" data-scroll>
+          <Link href="/ultra" className="proj-card" data-scroll>
             <div className="pc-img">
               <img src="/images/ultra/ultra-hero.webp" alt="Ultra Records" />
             </div>
