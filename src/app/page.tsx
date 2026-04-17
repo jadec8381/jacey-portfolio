@@ -356,7 +356,7 @@ export default function PortfolioHome() {
           </div>
           <div className="proj-img-wrap">
             {/* TODO: 替换成 Framer CDN URL */}
-            <img src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4ecbe398-9db3-4b40-90fd-721a63e0e9ed/SANVO+-+%E7%9B%91%E4%BF%AE%E4%B8%AD.png" alt="SANVO" />
+            <img src="/images/sanvo/website-hero.webp" alt="SANVO" />
           </div>
         </div>
 
@@ -364,7 +364,7 @@ export default function PortfolioHome() {
         <div className="proj-row">
           <div className="proj-card" data-scroll>
             <div className="pc-img">
-              <img src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/f1294254-6af0-435b-93eb-f1fae978a8ea/Wrapup1+%284%29.png" alt="GRID" />
+              <img src="/images/grid/grid-hero.webp" alt="GRID" />
             </div>
             <div className="pc-over">
               <div className="pc-over-top"><span className="pc-idx">02/</span><span className="pc-arrow">↗</span></div>
@@ -377,7 +377,7 @@ export default function PortfolioHome() {
           </div>
           <div className="proj-card" data-scroll>
             <div className="pc-img">
-              <img src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/d2733603-0d5c-4529-9958-4dc2707f58d3/Apollo+Mock+%281%29.png" alt="Apollo" />
+              <img src="/images/apollo/apollo-hero.webp" alt="Apollo" />
             </div>
             <div className="pc-over">
               <div className="pc-over-top"><span className="pc-idx">03/</span><span className="pc-arrow">↗</span></div>
@@ -420,7 +420,7 @@ export default function PortfolioHome() {
             <a href="/sanvo-art-direction" className="proj-link">View Project <span>→</span></a>
           </div>
           <div className="proj-img-wrap">
-            <img src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/0bc2cd9d-72b5-4544-9583-ad2c8229c952/SANVO2.70275+copy+2.jpg" alt="SANVO Campaign" />
+            <img src="/images/sanvo/photography-digi01.jpg" alt="SANVO Campaign" />
           </div>
         </div>
 
@@ -428,7 +428,7 @@ export default function PortfolioHome() {
         <div className="proj-row">
           <div className="proj-card" data-scroll>
             <div className="pc-img">
-              <img src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b98f7989-e113-423f-a37a-39b8cb355134/Aurora-Socials_DC+announcement+-+Linkedin.png" alt="Aurora Series" />
+              <img src="/images/aurora/aurora-hero01.png" alt="Aurora Series" />
             </div>
             <div className="pc-over">
               <div className="pc-over-top"><span className="pc-idx">02/</span><span className="pc-arrow">↗</span></div>
@@ -441,7 +441,7 @@ export default function PortfolioHome() {
           </div>
           <div className="proj-card" data-scroll>
             <div className="pc-img">
-              <img src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4e2617c2-7ff1-4ef6-8f5e-41d39b088868/315981623_10160496899774711_7627973115075317433_n.jpg" alt="Ultra Records" />
+              <img src="/images/ultra/ultra-hero01.webp" alt="Ultra Records" />
             </div>
             <div className="pc-over">
               <div className="pc-over-top"><span className="pc-idx">03/</span><span className="pc-arrow">↗</span></div>
@@ -458,7 +458,7 @@ export default function PortfolioHome() {
         <div className="proj-row rev">
           <div className="proj-card" data-scroll>
             <div className="pc-img">
-              <img src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png" alt="POP Surge" />
+              <img src="/images/popsurge/pop-poster7.png" alt="POP Surge" />
             </div>
             <div className="pc-over">
               <div className="pc-over-top"><span className="pc-idx">04/</span><span className="pc-arrow">↗</span></div>
@@ -471,7 +471,7 @@ export default function PortfolioHome() {
           </div>
           <div className="proj-card" data-scroll>
             <div className="pc-img">
-              <img src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/10db6907-fd8f-4168-86de-925b5db3fc99/Package-3.png" alt="4D6" />
+              <img src="/images/4d6/4d6-hero.webp" alt="4D6" />
             </div>
             <div className="pc-over">
               <div className="pc-over-top"><span className="pc-idx">05/</span><span className="pc-arrow">↗</span></div>
