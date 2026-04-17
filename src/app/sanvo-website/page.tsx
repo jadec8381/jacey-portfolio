@@ -313,7 +313,7 @@ export default function Page() {
             <section className="pd-hero scroll-reveal">
                 <div className="pd-hero-img">
                     <img
-                        src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4ecbe398-9db3-4b40-90fd-721a63e0e9ed/SANVO+-+%E7%9B%91%E4%BF%AE%E4%B8%AD.png"
+                        src="/images/sanvo/website-hero.webp"
                         alt="SANVO Project Cover"
                     />
                 </div>
@@ -445,7 +445,7 @@ export default function Page() {
                         {/* 示范：Full-width 大图 */}
                         <div className="pd-img-full pd-img-group scroll-reveal">
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4ecbe398-9db3-4b40-90fd-721a63e0e9ed/SANVO+-+%E7%9B%91%E4%BF%AE%E4%B8%AD.png"
+                                src="/images/sanvo/website-ia.webp"
                                 alt="SANVO IA Overview"
                             />
                             <p className="pd-img-caption">
@@ -471,11 +471,11 @@ export default function Page() {
                         {/* 示范：2-col 等宽双图 */}
                         <div className="pd-img-2col pd-img-group scroll-reveal">
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/0bc2cd9d-72b5-4544-9583-ad2c8229c952/SANVO2.70275+copy+2.jpg"
+                                src="/image/sanvo/website-wip3.webp"
                                 alt="SANVO Visual System 1"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4ecbe398-9db3-4b40-90fd-721a63e0e9ed/SANVO+-+%E7%9B%91%E4%BF%AE%E4%B8%AD.png"
+                                src="/image/sanvo/website-wip4.webp"
                                 alt="SANVO Visual System 2"
                             />
                         </div>
@@ -508,12 +508,12 @@ export default function Page() {
                         {/* 示范：2:1 asymmetric */}
                         <div className="pd-img-2to1 pd-img-group scroll-reveal">
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/0bc2cd9d-72b5-4544-9583-ad2c8229c952/SANVO2.70275+copy+2.jpg"
-                                alt="SANVO Desktop View"
+                                src="/images/sanvo/website-desktop1.png"
+                                alt="SANVO Desktop View 1"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4ecbe398-9db3-4b40-90fd-721a63e0e9ed/SANVO+-+%E7%9B%91%E4%BF%AE%E4%B8%AD.png"
-                                alt="SANVO Mobile View"
+                                src="/images/sanvo/website-desktop2.png"
+                                alt="SANVO Desktop View 2"
                             />
                         </div>
 
@@ -521,15 +521,15 @@ export default function Page() {
                         <div className="pd-img-mixed pd-img-group scroll-reveal">
                             <img
                                 className="img-span-full"
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4ecbe398-9db3-4b40-90fd-721a63e0e9ed/SANVO+-+%E7%9B%91%E4%BF%AE%E4%B8%AD.png"
+                                src="/images/sanvo/website-wip5.png"
                                 alt="SANVO Full Spread"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/0bc2cd9d-72b5-4544-9583-ad2c8229c952/SANVO2.70275+copy+2.jpg"
+                                src="/images/sanvo/sanvo-cndemo.gif"
                                 alt="SANVO Detail 1"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4ecbe398-9db3-4b40-90fd-721a63e0e9ed/SANVO+-+%E7%9B%91%E4%BF%AE%E4%B8%AD.png"
+                                src="/images/sanvo/sanvo-endemo.gif"
                                 alt="SANVO Detail 2"
                             />
                         </div>
@@ -587,7 +587,7 @@ export default function Page() {
                         {/* Final showcase — full width */}
                         <div className="pd-img-full pd-img-group scroll-reveal">
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4ecbe398-9db3-4b40-90fd-721a63e0e9ed/SANVO+-+%E7%9B%91%E4%BF%AE%E4%B8%AD.png"
+                                src="/images/sanvo/website-wip3.webp"
                                 alt="SANVO Final Showcase"
                             />
                         </div>
