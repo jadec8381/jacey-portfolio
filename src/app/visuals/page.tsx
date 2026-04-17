@@ -210,7 +210,7 @@ export default function Page() {
                 <Link href="/sanvocampaignphotography" className="vis-card featured-card scroll-reveal">
                     <div className="vis-img-wrap">
                         <img
-                            src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/0bc2cd9d-72b5-4544-9583-ad2c8229c952/SANVO2.70275+copy+2.jpg"
+                            src="/images/sanvo/photography-digi01.jpg"
                             alt="SANVO Art Direction"
                         />
                     </div>
@@ -247,7 +247,7 @@ export default function Page() {
                         style={{ aspectRatio: "4/3" }}
                     >
                         <img
-                            src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b98f7989-e113-423f-a37a-39b8cb355134/Aurora-Socials_DC+announcement+-+Linkedin.png"
+                            src="/images/aurora/aurora-hero01.png"
                             alt="Aurora Series"
                         />
                     </div>
@@ -277,7 +277,7 @@ export default function Page() {
                         style={{ aspectRatio: "4/3" }}
                     >
                         <img
-                            src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4e2617c2-7ff1-4ef6-8f5e-41d39b088868/315981623_10160496899774711_7627973115075317433_n.jpg"
+                            src="/images/ultra/ultra-hero.webp"
                             alt="Ultra Records"
                         />
                     </div>
@@ -306,7 +306,7 @@ export default function Page() {
                         style={{ aspectRatio: "4/3" }}
                     >
                         <img
-                            src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
+                            src="/images/popsurge/pop-poster7.png"
                             alt="POP Surge"
                         />
                     </div>
@@ -334,7 +334,7 @@ export default function Page() {
                         style={{ aspectRatio: "4/3" }}
                     >
                         <img
-                            src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/10db6907-fd8f-4168-86de-925b5db3fc99/Package-3.png"
+                            src="/images/4d6/4d6-hero.webp"
                             alt="4D6 Esports Wellness"
                         />
                     </div>

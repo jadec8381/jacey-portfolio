@@ -223,7 +223,7 @@ export default function Page() {
                 <Link href="/sanvo-website" className="prod-card featured-card scroll-reveal">
                     <div className="prod-img-wrap">
                         <img
-                            src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4ecbe398-9db3-4b40-90fd-721a63e0e9ed/SANVO+-+%E7%9B%91%E4%BF%AE%E4%B8%AD.png"
+                            src="/images/sanvo/website-hero.webp"
                             alt="SANVO Fine Chemicals"
                         />
                     </div>
@@ -262,7 +262,7 @@ export default function Page() {
                         style={{ aspectRatio: "4/3" }}
                     >
                         <img
-                            src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/f1294254-6af0-435b-93eb-f1fae978a8ea/Wrapup1+%284%29.png"
+                            src="/images/grid/grid-hero.webp"
                             alt="GRID Gamers"
                         />
                     </div>
@@ -290,7 +290,7 @@ export default function Page() {
                         style={{ aspectRatio: "4/3" }}
                     >
                         <img
-                            src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/d2733603-0d5c-4529-9958-4dc2707f58d3/Apollo+Mock+%281%29.png"
+                            src="/images/apollo/apollo-hero01.png"
                             alt="Apollo ID"
                         />
                     </div>
