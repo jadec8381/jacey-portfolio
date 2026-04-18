@@ -316,19 +316,40 @@ export default function Page() {
                         </div>
                         {/* 1 full */}
                         <div className="pd-img-full pd-img-group scroll-reveal">
-                            <img src={PH} alt="Construction 01" />
+                            <img
+                                src="/images/sanvo/photography-constu01.jpg"
+                                alt="Construction 01"
+                            />
                         </div>
                         {/* 3col */}
                         <div className="pd-img-3col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Construction 02" />
-                            <img src={PH} alt="Construction 03" />
-                            <img src={PH} alt="Construction 04" />
+                            <img
+                                src="/images/sanvo/photography-constu02.jpg"
+                                alt="Construction 02"
+                            />
+                            <img
+                                src="/images/sanvo/photography-constu03.jpg"
+                                alt="Construction 03"
+                            />
+                            <img
+                                src="/images/sanvo/photography-constu04.jpg"
+                                alt="Construction 04"
+                            />
                         </div>
                         {/* 3col */}
                         <div className="pd-img-3col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Construction 05" />
-                            <img src={PH} alt="Construction 06" />
-                            <img src={PH} alt="Construction 07" />
+                            <img
+                                src="/images/sanvo/photography-constu05.jpg"
+                                alt="Construction 05"
+                            />
+                            <img
+                                src="/images/sanvo/photography-constu06.jpg"
+                                alt="Construction 06"
+                            />
+                            <img
+                                src="/images/sanvo/photography-constu07.jpg"
+                                alt="Construction 07"
+                            />
                         </div>
 
                         {/* ─── SERIES 02: Household (5 shots) ─── */}
@@ -353,17 +374,32 @@ export default function Page() {
                         </div>
                         {/* 1 full */}
                         <div className="pd-img-full pd-img-group scroll-reveal">
-                            <img src={PH} alt="Household 01" />
+                            <img
+                                src="/images/sanvo/photography-daily03.jpg"
+                                alt="Household 01"
+                            />
                         </div>
                         {/* 2col */}
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Household 02" />
-                            <img src={PH} alt="Household 03" />
+                            <img
+                                src="/images/sanvo/photography-daily02.jpg"
+                                alt="Household 02"
+                            />
+                            <img
+                                src="/images/sanvo/photography-daily04.jpg"
+                                alt="Household 03"
+                            />
                         </div>
                         {/* 2col */}
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Household 04" />
-                            <img src={PH} alt="Household 05" />
+                            <img
+                                src="/images/sanvo/photography-daily01.jpg"
+                                alt="Household 04"
+                            />
+                            <img
+                                src="/images/sanvo/photography-daily05.jpg"
+                                alt="Household 05"
+                            />
                         </div>
 
                         {/* ─── SERIES 03: E-commerce (4 shots) ─── */}
@@ -388,12 +424,24 @@ export default function Page() {
                         </div>
                         {/* 2col + 2col */}
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src={PH} alt="E-commerce 01" />
-                            <img src={PH} alt="E-commerce 02" />
+                            <img
+                                src="/images/sanvo/photography-digi03.jpg"
+                                alt="E-commerce 01"
+                            />
+                            <img
+                                src="/images/sanvo/photography-digi04.jpg"
+                                alt="E-commerce 02"
+                            />
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src={PH} alt="E-commerce 03" />
-                            <img src={PH} alt="E-commerce 04" />
+                            <img
+                                src="/images/sanvo/photography-digi01.jpg"
+                                alt="E-commerce 03"
+                            />
+                            <img
+                                src="/images/sanvo/photography-digi02.jpg"
+                                alt="E-commerce 04"
+                            />
                         </div>
 
                         {/* ─── SERIES 04: Automotive (4 shots) ─── */}
@@ -417,12 +465,24 @@ export default function Page() {
                         </div>
                         {/* 1 full + 3col */}
                         <div className="pd-img-full pd-img-group scroll-reveal">
-                            <img src={PH} alt="Automotive 01" />
+                            <img
+                                src="/images/sanvo/photography-garage02.jpg"
+                                alt="Automotive 01"
+                            />
                         </div>
                         <div className="pd-img-3col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Automotive 02" />
-                            <img src={PH} alt="Automotive 03" />
-                            <img src={PH} alt="Automotive 04" />
+                            <img
+                                src="/images/sanvo/photography-garage03.jpg"
+                                alt="Automotive 02"
+                            />
+                            <img
+                                src="/images/sanvo/photography-garage04.jpg"
+                                alt="Automotive 03"
+                            />
+                            <img
+                                src="/images/sanvo/photography-garage01.jpg"
+                                alt="Automotive 04"
+                            />
                         </div>
                     </div>
 
@@ -476,12 +536,24 @@ export default function Page() {
                         {/* 2col + 2col for 4 long screenshots */}
                         <div className="pd-img-2col pd-img-group scroll-reveal">
                             {/* TODO: 替换成美术稿长图截图 */}
-                            <img src={PH2} alt="Art Direction Ref 01" />
-                            <img src={PH2} alt="Art Direction Ref 02" />
+                            <img
+                                src="/images/sanvo/photography-draft1.webp"
+                                alt="Art Direction Ref 01"
+                            />
+                            <img
+                                src="/images/sanvo/photography-draft2.webp"
+                                alt="Art Direction Ref 02"
+                            />
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src={PH2} alt="Art Direction Ref 03" />
-                            <img src={PH2} alt="Art Direction Ref 04" />
+                            <img
+                                src="/images/sanvo/photography-draft3.webp"
+                                alt="Art Direction Ref 03"
+                            />
+                            <img
+                                src="/images/sanvo/photography-draft4.webp"
+                                alt="Art Direction Ref 04"
+                            />
                         </div>
 
                         {/* Final closing image */}
