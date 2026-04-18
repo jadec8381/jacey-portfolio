@@ -15,7 +15,6 @@ export default function PortfolioHome() {
   const containerRef = useRef<HTMLDivElement>(null)
   const splineContainerRef = useRef<HTMLDivElement>(null)
 
-  // 1. Spline 引擎注入
   useEffect(() => {
     const script = document.createElement("script")
     script.type = "module"
@@ -23,23 +22,17 @@ export default function PortfolioHome() {
     document.head.appendChild(script)
   }, [])
 
-  // 2. 🌟 修复：让 Spline 区域的滚轮事件穿透到页面
   useEffect(() => {
     const splineEl = splineContainerRef.current
     if (!splineEl) return
-
     const handleWheel = (e: WheelEvent) => {
-      // 阻止 Spline 吃掉 scroll，手动转发给 window
       e.preventDefault()
       window.scrollBy({ top: e.deltaY, behavior: "auto" })
     }
-
-    // 用 passive: false 才能 preventDefault
     splineEl.addEventListener("wheel", handleWheel, { passive: false })
     return () => splineEl.removeEventListener("wheel", handleWheel)
   }, [])
 
-  // 3. 滚动动画
   useEffect(() => {
     if (!containerRef.current) return
     const obs = new IntersectionObserver(
@@ -93,15 +86,11 @@ export default function PortfolioHome() {
           position: relative;
         }
 
-        /* ══════════════════════════════
-           HERO
-           ══════════════════════════════ */
         .hero-cover {
           position: relative; width: 100%; height: 100vh; min-height: 700px;
           display: flex; flex-direction: column;
           background: var(--bg); overflow: hidden;
         }
-
         .hero-bg-fluid {
           position: absolute; inset: 0; z-index: 0;
           overflow: hidden; filter: blur(120px); opacity: 0.6;
@@ -116,26 +105,22 @@ export default function PortfolioHome() {
           display: flex; align-items: center; justify-content: center;
           overflow: hidden; mix-blend-mode: screen;
         }
-
         spline-viewer {
           width: 100%; height: 100%;
           transform: scale(1.25);
           transform-origin: center center;
-          pointer-events: auto; /* hover/cursor follow 仍然有效 */
+          pointer-events: auto;
         }
-
         .hero-overlay {
           position: absolute; inset: 0;
           background: linear-gradient(to bottom, rgba(10,13,20,0) 0%, rgba(10,13,20,0.2) 60%, var(--bg) 100%);
           z-index: 3; pointer-events: none;
         }
-
         .hero-content {
           position: relative; display: flex; flex-direction: column;
           height: 100%; justify-content: flex-end;
           padding-bottom: 24px; pointer-events: none;
         }
-
         .hero-bottom-grid { padding: 0 48px; pointer-events: none; }
 
         .hero-title-wrap {
@@ -164,20 +149,14 @@ export default function PortfolioHome() {
           animation: fadeUp 1s cubic-bezier(.16,1,.3,1) .6s forwards;
         }
         @keyframes fadeUp { to { opacity: 1; transform: translateY(0) } }
-
         .info-tagline { font-size: clamp(16px, 1.5vw, 24px); font-weight: 400; line-height: 1.5; color: rgba(255,255,255,0.9); max-width: 600px; }
         .info-meta { font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; color: rgba(255,255,255,0.7); display: flex; flex-direction: column; gap: 8px; }
-
         .barcode-wrap { display: flex; flex-direction: column; align-items: flex-end; }
         .barcode { display: flex; gap: 4px; height: 50px; align-items: flex-end; }
         .bc-line { background: var(--white); height: 100%; width: 2px; }
         .bc-num { color: var(--white); font-family: 'Space Mono', monospace; font-size: 10px; margin-top: 6px; letter-spacing: 2px; opacity: 0.8; }
 
-        /* ══════════════════════════════
-           WORK SECTIONS
-           ══════════════════════════════ */
         .work-sec { padding: 80px 48px 0; }
-
         .sec-head {
           border-top: 2px solid var(--rule); padding-top: 16px;
           display: flex; justify-content: space-between; align-items: baseline;
@@ -193,7 +172,6 @@ export default function PortfolioHome() {
         }
         .sec-count { font-family: 'Space Mono', monospace; font-size: 13px; color: var(--gray-60); }
 
-        /* Hero project card */
         .proj-hero {
           display: grid; grid-template-columns: 1fr 1fr; gap: 0;
           margin-bottom: 1px; border-top: 1px solid var(--rule);
@@ -212,9 +190,21 @@ export default function PortfolioHome() {
           padding-bottom: 12px; border-bottom: 1px solid var(--rule-lt); margin-bottom: 16px;
         }
         .proj-client { font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 14px; color: var(--black); text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
-        .proj-year { font-family: 'Barlow', sans-serif; font-size: 13px; color: var(--gray-60); }
         .proj-idx { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--black); }
-        .proj-title { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: clamp(28px, 3.5vw, 48px); letter-spacing: 1px; text-transform: uppercase; line-height: .95; margin: 24px 0 20px; color: var(--black); }
+        .proj-year { font-family: 'Barlow', sans-serif; font-size: 13px; color: var(--gray-60); }
+
+        /* 🌟 标题做成可点击链接 */
+        .proj-title-link {
+          text-decoration: none; color: var(--black);
+          display: block; margin: 24px 0 20px;
+        }
+        .proj-title-link:hover { opacity: 0.7; }
+        .proj-title {
+          font-family: 'Oswald', sans-serif; font-weight: 700;
+          font-size: clamp(28px, 3.5vw, 48px); letter-spacing: 1px;
+          text-transform: uppercase; line-height: .95; color: var(--black);
+        }
+
         .proj-desc { font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 300; color: var(--gray-40); line-height: 1.65; max-width: 400px; margin-bottom: 32px; }
 
         .meta-table { width: 100%; max-width: 420px; }
@@ -222,18 +212,25 @@ export default function PortfolioHome() {
         .meta-row .mk { color: var(--gray-60); font-weight: 400; }
         .meta-row .mv { color: var(--black); font-weight: 500; text-align: right; }
 
-        .proj-img-wrap { background: var(--gray-10); overflow: hidden; position: relative; cursor: pointer; min-height: 420px; }
-        .proj-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.16,1,.3,1); opacity: 0.9; }
-        .proj-hero:hover .proj-img-wrap img { transform: scale(1.03); opacity: 1; }
+        /* 🌟 图片区域做成可点击链接 */
+        .proj-img-link {
+          display: block;
+          background: var(--gray-10); overflow: hidden;
+          position: relative; cursor: pointer; min-height: 420px;
+        }
+        .proj-img-link img {
+          width: 100%; height: 100%; object-fit: cover;
+          transition: transform .8s cubic-bezier(.16,1,.3,1); opacity: 0.9;
+        }
+        .proj-hero:hover .proj-img-link img { transform: scale(1.03); opacity: 1; }
 
         .proj-link { display: inline-flex; align-items: center; gap: 8px; font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--black); text-decoration: none; margin-top: auto; padding-top: 24px; transition: gap .3s; }
         .proj-link:hover { gap: 14px; }
 
-        /* Project row cards */
         .proj-row { display: grid; grid-template-columns: 1.4fr .6fr; gap: 1px; margin-top: 1px; margin-bottom: 80px; }
         .proj-row.rev { grid-template-columns: .6fr 1.4fr; }
 
-        .proj-card { position: relative; overflow: hidden; cursor: pointer; background: var(--dark); opacity: 0; transform: translateY(40px); transition: all .7s cubic-bezier(.16,1,.3,1); }
+        .proj-card { position: relative; overflow: hidden; cursor: pointer; background: var(--dark); opacity: 0; transform: translateY(40px); transition: all .7s cubic-bezier(.16,1,.3,1); text-decoration: none; color: var(--white); display: block; }
         .proj-card.visible { opacity: 1; transform: translateY(0); }
         .proj-card:nth-child(2).visible { transition-delay: .08s; }
 
@@ -249,18 +246,13 @@ export default function PortfolioHome() {
         .proj-card:hover .pc-arrow { border-color: var(--white); color: var(--white); }
         .pc-over .pc-title { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: clamp(22px, 2.5vw, 36px); letter-spacing: 1px; text-transform: uppercase; line-height: .95; color: var(--white); margin-bottom: 6px; }
         .pc-over .pc-sub { font-family: 'Barlow', sans-serif; font-size: 13px; color: rgba(255,255,255,.5); font-weight: 300; }
-
         .pc-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
         .pc-tag { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; padding: 4px 14px; border: 1px solid rgba(255,255,255,.25); border-radius: 20px; font-size: 10px; letter-spacing: 1px; color: rgba(255,255,255,.7); text-transform: uppercase; transition: all .3s; }
 
-        /* Footer */
         .portfolio-container footer { padding: 32px 48px; border-top: 2px solid var(--rule); display: grid; grid-template-columns: 1fr 1fr 1fr; font-family: 'Barlow', sans-serif; font-size: 12px; color: var(--gray-60); letter-spacing: .5px; text-transform: uppercase; font-weight: 500; }
         .portfolio-container footer .fc { text-align: center; }
         .portfolio-container footer .fr { text-align: right; }
 
-        /* ══════════════════════════════
-           RESPONSIVE
-           ══════════════════════════════ */
         @media (max-width: 1024px) {
           spline-viewer { transform: scale(1.0); }
           .hero-info-row { grid-template-columns: 1fr; gap: 24px; }
@@ -277,7 +269,7 @@ export default function PortfolioHome() {
           .portfolio-container footer { padding: 24px; grid-template-columns: 1fr; gap: 16px; text-align: center; }
           .portfolio-container footer .fc, .portfolio-container footer .fr { text-align: center; }
           .sec-title { font-size: clamp(36px, 10vw, 60px); }
-          .proj-img-wrap { min-height: 260px; }
+          .proj-img-link { min-height: 260px; }
         }
       `}</style>
 
@@ -287,17 +279,13 @@ export default function PortfolioHome() {
           <div className="fluid-orb orb-1" />
           <div className="fluid-orb orb-2" />
         </div>
-
-        {/* 🌟 加了 ref 用于拦截 wheel 事件 */}
         <div className="spline-container" ref={splineContainerRef}>
           <spline-viewer
             loading-anim-type="none"
             url="https://prod.spline.design/gcXjQfAO5aT2HDwj/scene.splinecode"
           />
         </div>
-
         <div className="hero-overlay" />
-
         <div className="hero-content">
           <div className="hero-bottom-grid">
             <div className="hero-title-wrap">
@@ -333,7 +321,7 @@ export default function PortfolioHome() {
           <div className="sec-count">(03)</div>
         </div>
 
-        {/* 01. SANVO hero */}
+        {/* 01. SANVO Website — hero project */}
         <div className="proj-hero" data-scroll>
           <div className="proj-meta">
             <div>
@@ -342,7 +330,9 @@ export default function PortfolioHome() {
                 <div className="proj-idx">01/</div>
               </div>
               <div className="proj-year">2026 — Coming Soon</div>
-              <h3 className="proj-title">SANVO BILINGUAL<br />WEB ECOSYSTEM</h3>
+              <Link href="/sanvo-website" className="proj-title-link">
+                <h3 className="proj-title">SANVO BILINGUAL<br />WEB ECOSYSTEM</h3>
+              </Link>
               <p className="proj-desc">
                 Full bilingual web ecosystem with AI-augmented design workflow.
                 Led product design, strategy, and creative direction.
@@ -355,14 +345,14 @@ export default function PortfolioHome() {
             </div>
             <Link href="/sanvo-website" className="proj-link">View Project <span>→</span></Link>
           </div>
-          <div className="proj-img-wrap">
+          <Link href="/sanvo-website" className="proj-img-link">
             <img src="/images/sanvo/website-hero.webp" alt="SANVO" />
-          </div>
+          </Link>
         </div>
 
         {/* 02 + 03 row */}
         <div className="proj-row">
-          <Link href="https://docs.google.com/presentation/d/1kEhP_GZXXueLS4dS7upbL2tpaZa7B8t2RKmyw-3Ll2o/edit?usp=sharing" className="proj-card" data-scroll>
+          <Link href="https://docs.google.com/presentation/d/1kEhP_GZXXueLS4dS7upbL2tpaZa7B8t2RKmyw-3Ll2o/edit?usp=sharing" className="proj-card" data-scroll target="_blank" rel="noopener noreferrer">
             <div className="pc-img">
               <img src="/images/grid/grid-hero.webp" alt="GRID" />
             </div>
@@ -398,7 +388,7 @@ export default function PortfolioHome() {
           <div className="sec-count">(05)</div>
         </div>
 
-        {/* 01. SANVO Campaign hero */}
+        {/* 01. SANVO Art Direction — hero project */}
         <div className="proj-hero" data-scroll>
           <div className="proj-meta">
             <div>
@@ -407,7 +397,9 @@ export default function PortfolioHome() {
                 <div className="proj-idx">01/</div>
               </div>
               <div className="proj-year">2026</div>
-              <h3 className="proj-title">ART DIRECTION<br />& CAMPAIGN</h3>
+              <Link href="/sanvo-art-direction" className="proj-title-link">
+                <h3 className="proj-title">ART DIRECTION<br />& CAMPAIGN</h3>
+              </Link>
               <p className="proj-desc">
                 Editorial still life photography across four product series.
                 Art direction for brand visual refresh.
@@ -419,9 +411,9 @@ export default function PortfolioHome() {
             </div>
             <Link href="/sanvo-art-direction" className="proj-link">View Project <span>→</span></Link>
           </div>
-          <div className="proj-img-wrap">
+          <Link href="/sanvo-art-direction" className="proj-img-link">
             <img src="/images/sanvo/photography-digi01.jpg" alt="SANVO Campaign" />
-          </div>
+          </Link>
         </div>
 
         {/* 02 + 03: Aurora + Ultra */}
@@ -451,7 +443,7 @@ export default function PortfolioHome() {
                 <div className="pc-tags"><span className="pc-tag">Music</span><span className="pc-tag">Album Art</span></div>
               </div>
             </div>
-          </Link >
+          </Link>
         </div>
 
         {/* 04 + 05: POP Surge + 4D6 */}
@@ -468,7 +460,7 @@ export default function PortfolioHome() {
                 <div className="pc-tags"><span className="pc-tag">Branding</span><span className="pc-tag">Award Winner</span></div>
               </div>
             </div>
-          </Link >
+          </Link>
           <Link href="/4d6" className="proj-card" data-scroll>
             <div className="pc-img">
               <img src="/images/4d6/4d6-hero.webp" alt="4D6" />
@@ -481,15 +473,15 @@ export default function PortfolioHome() {
                 <div className="pc-tags"><span className="pc-tag">Thesis</span><span className="pc-tag">Packaging</span></div>
               </div>
             </div>
-          </Link >
+          </Link>
         </div>
-      </section >
+      </section>
 
       <footer>
         <span>Jacey Chen Studio</span>
         <span className="fc">Product & Visual Design</span>
         <span className="fr">NYC ©2026</span>
       </footer>
-    </div >
+    </div>
   )
 }
