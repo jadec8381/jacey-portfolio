@@ -377,10 +377,10 @@ export default function Page() {
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
                             <img src="/images/4d6/4d6-branding05.png" alt="Mockup 2" />
-                            <img src="/images/4d6/4d6-branding01.png" alt="Mockup 3" />
+                            <img src="/images/4d6/4d6-branding02.png" alt="Mockup 3" />
                         </div>
-                        <div className="pd-img-3col pd-img-group pd-img-contain scroll-reveal">
-                            <img src="/images/4d6/4d6-branding02.png" alt="Mockup 4" />
+                        <div className="pd-img-3col pd-img-group scroll-reveal">
+                            <img src="/images/4d6/4d6-branding01.png" alt="Mockup 4" />
                             <img src="/images/4d6/4d6-branding03.png" alt="Mockup 5" />
                             <img src="/images/4d6/4d6-branding04.png" alt="Mockup 6" />
                         </div>
