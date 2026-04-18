@@ -410,75 +410,76 @@ export default function Page() {
                                 <source src="/videos/ultra/ultra-tk04.mp4" type="video/mp4" />
                             </video>
                         </div>
+                    </div>
 
-                        {/* ── 03: Roster ── */}
-                        <div
-                            className="pd-section"
-                            data-num="03"
-                            data-label="Roster"
-                        >
-                            <div className="pd-text-block scroll-reveal">
-                                <div className="pd-text-title">Artist Roster</div>
-                                <div className="pd-text-content">
-                                    <h3>Collaborations</h3>
-                                    <p>
-                                        Worked across a diverse roster of
-                                        electronic, pop, and dance artists — each
-                                        requiring a unique visual approach while
-                                        maintaining Ultra Records' overarching brand
-                                        standards.
-                                    </p>
+                    {/* ── 03: Roster ── */}
+                    <div
+                        className="pd-section"
+                        data-num="03"
+                        data-label="Roster"
+                    >
+                        <div className="pd-text-block scroll-reveal">
+                            <div className="pd-text-title">Artist Roster</div>
+                            <div className="pd-text-content">
+                                <h3>Collaborations</h3>
+                                <p>
+                                    Worked across a diverse roster of
+                                    electronic, pop, and dance artists — each
+                                    requiring a unique visual approach while
+                                    maintaining Ultra Records' overarching brand
+                                    standards.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="pd-roster scroll-reveal">
+                            <div className="pd-roster-item">
+                                <div className="pd-roster-name">
+                                    Luca Schreiner
+                                </div>
+                                <div className="pd-roster-role">
+                                    Release artwork & social
                                 </div>
                             </div>
-
-                            <div className="pd-roster scroll-reveal">
-                                <div className="pd-roster-item">
-                                    <div className="pd-roster-name">
-                                        Luca Schreiner
-                                    </div>
-                                    <div className="pd-roster-role">
-                                        Release artwork & social
-                                    </div>
+                            <div className="pd-roster-item">
+                                <div className="pd-roster-name">Icona Pop</div>
+                                <div className="pd-roster-role">
+                                    Release music platform socials
                                 </div>
-                                <div className="pd-roster-item">
-                                    <div className="pd-roster-name">Icona Pop</div>
-                                    <div className="pd-roster-role">
-                                        Release music platform socials
-                                    </div>
+                            </div>
+                            <div className="pd-roster-item">
+                                <div className="pd-roster-name">
+                                    Mahmut Orhan
                                 </div>
-                                <div className="pd-roster-item">
-                                    <div className="pd-roster-name">
-                                        Mahmut Orhan
-                                    </div>
-                                    <div className="pd-roster-role">
-                                        Release social
-                                    </div>
+                                <div className="pd-roster-role">
+                                    Release social
                                 </div>
-                                <div className="pd-roster-item">
-                                    <div className="pd-roster-name">
-                                        Luca Schreiner
-                                    </div>
-                                    <div className="pd-roster-role">
-                                        Release artwork & visualizer
-                                    </div>
+                            </div>
+                            <div className="pd-roster-item">
+                                <div className="pd-roster-name">
+                                    Luca Schreiner
                                 </div>
-                                <div className="pd-roster-item">
-                                    <div className="pd-roster-name">Faul & Wad</div>
-                                    <div className="pd-roster-role">
-                                        Release artwork & social
-                                    </div>
+                                <div className="pd-roster-role">
+                                    Release artwork & visualizer
                                 </div>
-                                <div className="pd-roster-item">
-                                    <div className="pd-roster-name">
-                                        Steve Aoki ft. BTS Catalog
-                                    </div>
-                                    <div className="pd-roster-role">
-                                        Catalog content & assets
-                                    </div>
+                            </div>
+                            <div className="pd-roster-item">
+                                <div className="pd-roster-name">Faul & Wad</div>
+                                <div className="pd-roster-role">
+                                    Release artwork & social
+                                </div>
+                            </div>
+                            <div className="pd-roster-item">
+                                <div className="pd-roster-name">
+                                    Steve Aoki ft. BTS Catalog
+                                </div>
+                                <div className="pd-roster-role">
+                                    Catalog content & assets
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </section>
 
             {/* ══════════ NEXT ══════════ */}
