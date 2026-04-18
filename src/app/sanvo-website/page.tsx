@@ -498,7 +498,10 @@ export default function Page() {
                         </div>
 
                         {/* 示范：2:1 asymmetric */}
-                        <div className="pd-img-2col pd-img-group scroll-reveal">
+                        <div
+                            className="pd-img-2col pd-img-group scroll-reveal"
+                            style={{ alignItems: "start" }}
+                        >
                             <img
                                 src="/images/sanvo/website-detail03.png"
                                 alt="SANVO Product Listing"
