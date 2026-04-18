@@ -439,11 +439,11 @@ export default function Page() {
 
                         {/* Batch 1 */}
                         <div className="pd-img-full pd-img-group scroll-reveal">
-                            <img src="/images/auroraseries/aurora-aurora-2324-06.png" alt="Graphic 01" />
+                            <img src="/images/auroraseries/aurora-2324-06.png" alt="Graphic 01" />
                         </div>
                         <div className="pd-img-3col pd-img-group scroll-reveal">
-                            <img src="/images/auroraseries/aurora-aurora-2324-04.png" alt="Graphic 02" />
-                            <img src="/images/auroraseries/aurora-aurora-2324-05.png" alt="Graphic 03" />
+                            <img src="/images/auroraseries/aurora-2324-04.png" alt="Graphic 02" />
+                            <img src="/images/auroraseries/aurora-2324-05.png" alt="Graphic 03" />
                             <img src="/images/auroraseries/Aurora-Socials_Doc Header.png" alt="Graphic 04" />
                         </div>
                         <div className="pd-img-3col pd-img-group scroll-reveal">
@@ -459,12 +459,12 @@ export default function Page() {
                             <img src="/images/auroraseries/aurora-sponsors03.png" alt="Graphic 04" />
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src="/images/auroraseries/aurora-aurora-2324-07.png" alt="Graphic 02" />
-                            <img src="/images/auroraseries/aurora-aurora-2324-08.png" alt="Graphic 03" />
+                            <img src="/images/auroraseries/aurora-2324-07.png" alt="Graphic 02" />
+                            <img src="/images/auroraseries/aurora-2324-08.png" alt="Graphic 03" />
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src="/images/auroraseries/aurora-aurora-2324-09.png" alt="Graphic 11" />
-                            <img src="/images/auroraseries/aurora-aurora-2324-10.png" alt="Graphic 12" />
+                            <img src="/images/auroraseries/aurora-2324-09.png" alt="Graphic 11" />
+                            <img src="/images/auroraseries/aurora-2324-10.png" alt="Graphic 12" />
                         </div>
 
                         {/* Batch 3 */}
