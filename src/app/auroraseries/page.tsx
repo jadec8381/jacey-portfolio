@@ -428,93 +428,66 @@ export default function Page() {
                         </div>
 
                         <div className="pd-img-full pd-img-group scroll-reveal">
-                            <img src={PH} alt="Brand Book Cover" />
-                        </div>
-                        <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Brand Book Spread 1" />
-                            <img src={PH} alt="Brand Book Spread 2" />
-                        </div>
-                        <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Brand Book Spread 3" />
-                            <img src={PH} alt="Brand Book Spread 4" />
+                            <img src="/images/auroraseries/aurora-brandbook.webp" alt="Brand Book Cover" />
                         </div>
 
                         {/* Graphics Gallery */}
                         <div className="pd-gallery-label scroll-reveal">
                             <span>Tournament & Social Graphics</span>
-                            <span className="pd-gallery-count">32 pieces</span>
+                            <span className="pd-gallery-count">Selected Pieces</span>
                         </div>
 
                         {/* Batch 1 */}
                         <div className="pd-img-full pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 01" />
+                            <img src="/images/auroraseries/aurora-aurora-2324-06.png" alt="Graphic 01" />
                         </div>
                         <div className="pd-img-3col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 02" />
-                            <img src={PH} alt="Graphic 03" />
-                            <img src={PH} alt="Graphic 04" />
+                            <img src="/images/auroraseries/aurora-aurora-2324-04.png" alt="Graphic 02" />
+                            <img src="/images/auroraseries/aurora-aurora-2324-05.png" alt="Graphic 03" />
+                            <img src="/images/auroraseries/Aurora-Socials_Doc Header.png" alt="Graphic 04" />
                         </div>
-                        <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 05" />
-                            <img src={PH} alt="Graphic 06" />
+                        <div className="pd-img-3col pd-img-group scroll-reveal">
+                            <img src="/images/auroraseries/aurora-2324-01.png" alt="Graphic 05" />
+                            <img src="/images/auroraseries/aurora-2324-02.png" alt="Graphic 06" />
+                            <img src="/images/auroraseries/aurora-2324-03.png" alt="Graphic 06" />
                         </div>
 
                         {/* Batch 2 */}
-                        <div className="pd-img-full pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 07" />
-                        </div>
                         <div className="pd-img-3col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 08" />
-                            <img src={PH} alt="Graphic 09" />
-                            <img src={PH} alt="Graphic 10" />
+                            <img src="/images/auroraseries/aurora-sponsors01.webp" alt="Graphic 02" />
+                            <img src="/images/auroraseries/aurora-sponsors02.png" alt="Graphic 03" />
+                            <img src="/images/auroraseries/aurora-sponsors03.png" alt="Graphic 04" />
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 11" />
-                            <img src={PH} alt="Graphic 12" />
+                            <img src="/images/auroraseries/aurora-aurora-2324-07.png" alt="Graphic 02" />
+                            <img src="/images/auroraseries/aurora-aurora-2324-08.png" alt="Graphic 03" />
+                        </div>
+                        <div className="pd-img-2col pd-img-group scroll-reveal">
+                            <img src="/images/auroraseries/aurora-aurora-2324-09.png" alt="Graphic 11" />
+                            <img src="/images/auroraseries/aurora-aurora-2324-10.png" alt="Graphic 12" />
                         </div>
 
                         {/* Batch 3 */}
-                        <div className="pd-img-3col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 13" />
-                            <img src={PH} alt="Graphic 14" />
-                            <img src={PH} alt="Graphic 15" />
+                        <div className="pd-img-2col pd-img-group scroll-reveal">
+                            <img src="/images/auroraseries/aurora-2425-09.png" alt="Graphic 11" />
+                            <img src="/images/auroraseries/aurora-2425-01.png" alt="Graphic 12" />
                         </div>
                         <div className="pd-img-full pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 16" />
+                            <img src="/images/auroraseries/aurora-2425-02.png" alt="Graphic 16" />
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 17" />
-                            <img src={PH} alt="Graphic 18" />
+                            <img src="/images/auroraseries/aurora-2425-07.png" alt="Graphic 17" />
+                            <img src="/images/auroraseries/aurora-2425-08.png" alt="Graphic 18" />
                         </div>
 
                         {/* Batch 4 */}
-                        <div className="pd-img-3col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 19" />
-                            <img src={PH} alt="Graphic 20" />
-                            <img src={PH} alt="Graphic 21" />
+                        <div className="pd-img-2col pd-img-group scroll-reveal">
+                            <img src="/images/auroraseries/aurora-2425-03.png" alt="Graphic 19" />
+                            <img src="/images/auroraseries/aurora-2425-04.png" alt="Graphic 20" />
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 22" />
-                            <img src={PH} alt="Graphic 23" />
-                        </div>
-                        <div className="pd-img-3col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 24" />
-                            <img src={PH} alt="Graphic 25" />
-                            <img src={PH} alt="Graphic 26" />
-                        </div>
-
-                        {/* Batch 5 */}
-                        <div className="pd-img-full pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 27" />
-                        </div>
-                        <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 28" />
-                            <img src={PH} alt="Graphic 29" />
-                        </div>
-                        <div className="pd-img-3col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Graphic 30" />
-                            <img src={PH} alt="Graphic 31" />
-                            <img src={PH} alt="Graphic 32" />
+                            <img src="/images/auroraseries/aurora-2425-05.png" alt="Graphic 22" />
+                            <img src="/images/auroraseries/aurora-2425-06.png" alt="Graphic 23" />
                         </div>
                     </div>
                 </div>
