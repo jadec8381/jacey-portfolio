@@ -444,7 +444,7 @@ export default function Page() {
                         <div className="pd-img-3col pd-img-group scroll-reveal">
                             <img src="/images/aurora/aurora-2324-04.png" alt="Graphic 02" />
                             <img src="/images/aurora/aurora-2324-05.png" alt="Graphic 03" />
-                            <img src="/images/aurora/Aurora-Socials_Doc Header.png" alt="Graphic 04" />
+                            <img src="/images/aurora/aurora-2324-12.png" alt="Graphic 04" />
                         </div>
                         <div className="pd-img-3col pd-img-group scroll-reveal">
                             <img src="/images/aurora/aurora-2324-01.png" alt="Graphic 05" />
