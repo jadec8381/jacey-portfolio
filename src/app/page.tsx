@@ -398,7 +398,7 @@ export default function PortfolioHome() {
               </div>
               <div className="proj-year">2026</div>
               <Link href="/sanvo-art-direction" className="proj-title-link">
-                <h3 className="proj-title">ART DIRECTION<br />& CAMPAIGN</h3>
+                <h3 className="proj-title">SANVO ART DIRECTION<br />& CAMPAIGN</h3>
               </Link>
               <p className="proj-desc">
                 Editorial still life photography across four product series.
