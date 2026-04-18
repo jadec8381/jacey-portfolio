@@ -498,19 +498,28 @@ export default function Page() {
                         </div>
 
                         {/* 示范：2:1 asymmetric */}
-                        <div
-                            className="pd-img-2col pd-img-group scroll-reveal"
-                            style={{ alignItems: "start" }}
+                        <div className="pd-img-2col pd-img-group scroll-reveal"
+                            style={{ height: "600px", alignItems: "center" }}
                         >
                             <img
                                 src="/images/sanvo/website-detail03.png"
                                 alt="SANVO Product Listing"
-                                style={{ objectFit: "contain", background: "#111" }}
+                                style={{
+                                    objectFit: "contain",
+                                    height: "100%",
+                                    background: "#111",
+                                }}
                             />
                             <img
                                 src="/images/sanvo/website-detail05.png"
                                 alt="SANVO Product Detail"
-                                style={{ objectFit: "contain", background: "#111" }}
+                                style={{
+                                    objectFit: "contain",
+                                    height: "100%",
+                                    maxWidth: "80%",
+                                    margin: "0 auto",
+                                    background: "#111",
+                                }}
                             />
                         </div>
                     </div>
