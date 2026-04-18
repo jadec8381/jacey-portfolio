@@ -321,26 +321,26 @@ export default function Page() {
                         <div className="pd-img-3col pd-img-group scroll-reveal">
                             {/* TODO: 替换成 3 张 album cover */}
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4e2617c2-7ff1-4ef6-8f5e-41d39b088868/315981623_10160496899774711_7627973115075317433_n.jpg"
+                                src="/images/ultra/ultra-album01.jpg"
                                 alt="Cover 1"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4e2617c2-7ff1-4ef6-8f5e-41d39b088868/315981623_10160496899774711_7627973115075317433_n.jpg"
+                                src="/images/ultra/ultra-album02.jpg"
                                 alt="Cover 2"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4e2617c2-7ff1-4ef6-8f5e-41d39b088868/315981623_10160496899774711_7627973115075317433_n.jpg"
+                                src="/images/ultra/ultra-album03.jpg"
                                 alt="Cover 3"
                             />
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
                             {/* TODO: 替换成剩余 2 张 album cover */}
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4e2617c2-7ff1-4ef6-8f5e-41d39b088868/315981623_10160496899774711_7627973115075317433_n.jpg"
+                                src="/images/ultra/ultra-album04.jpg"
                                 alt="Cover 4"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4e2617c2-7ff1-4ef6-8f5e-41d39b088868/315981623_10160496899774711_7627973115075317433_n.jpg"
+                                src="/images/ultra/ultra-album05.webp"
                                 alt="Cover 5"
                             />
                         </div>
@@ -360,13 +360,23 @@ export default function Page() {
                         </div>
 
                         {/* Video placeholder */}
-                        <div className="pd-video-wrap scroll-reveal">
-                            {/* TODO: 替换成实际 YouTube embed 或视频截图 */}
-                            <div className="pd-video-play">▶</div>
-                            <span className="pd-video-label">
-                                YouTube Visualizer
-                            </span>
-                        </div>
+                        <a
+                            href="https://youtu.be/K66aEGjRQq8?si=t-Fm7fAFbYPlSQ0D"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: "none" }}
+                        >
+                            <div className="pd-video-embed scroll-reveal">
+                                <iframe
+                                    src="https://www.youtube.com/embed/K66aEGjRQq8"
+                                    title="Luca Schreiner - Weight feat. sonofsteve"
+                                    width="100%"
+                                    style={{ aspectRatio: '16/9', border: 'none', borderRadius: '4px' }}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                />
+                            </div>
+                        </a>
 
                         <div className="pd-text-block scroll-reveal">
                             <div className="pd-text-title">Social Content</div>
@@ -387,21 +397,21 @@ export default function Page() {
                         <div className="pd-img-2col pd-img-group scroll-reveal">
                             {/* TODO: 替换成 4 张 reel 截图（9:16 竖版） */}
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4e2617c2-7ff1-4ef6-8f5e-41d39b088868/315981623_10160496899774711_7627973115075317433_n.jpg"
+                                src="/videos/ultra/ultra-tk01.mp4"
                                 alt="Reel 1"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4e2617c2-7ff1-4ef6-8f5e-41d39b088868/315981623_10160496899774711_7627973115075317433_n.jpg"
+                                src="/videos/ultra/ultra-tk02.mp4"
                                 alt="Reel 2"
                             />
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4e2617c2-7ff1-4ef6-8f5e-41d39b088868/315981623_10160496899774711_7627973115075317433_n.jpg"
+                                src="/videos/ultra/ultra-tk03.mp4"
                                 alt="Reel 3"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/4e2617c2-7ff1-4ef6-8f5e-41d39b088868/315981623_10160496899774711_7627973115075317433_n.jpg"
+                                src="/videos/ultra/ultra-tk04.mp4"
                                 alt="Reel 4"
                             />
                         </div>
@@ -430,7 +440,7 @@ export default function Page() {
                         <div className="pd-roster scroll-reveal">
                             <div className="pd-roster-item">
                                 <div className="pd-roster-name">
-                                    Benny Benassi
+                                    Luca Schreiner
                                 </div>
                                 <div className="pd-roster-role">
                                     Release artwork & social
@@ -444,10 +454,10 @@ export default function Page() {
                             </div>
                             <div className="pd-roster-item">
                                 <div className="pd-roster-name">
-                                    Sofi Tukker
+                                    Mahmut Orhan
                                 </div>
                                 <div className="pd-roster-role">
-                                    Release artwork & social
+                                    Release social
                                 </div>
                             </div>
                             <div className="pd-roster-item">
@@ -466,7 +476,7 @@ export default function Page() {
                             </div>
                             <div className="pd-roster-item">
                                 <div className="pd-roster-name">
-                                    BTS Catalog
+                                    Steve Aoki ft. BTS Catalog
                                 </div>
                                 <div className="pd-roster-role">
                                     Catalog content & assets
