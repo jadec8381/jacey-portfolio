@@ -242,7 +242,7 @@ export default function Page() {
                 {/* 替换成你抱着烤面包机的那张图片URL！ */}
                 <img
                     className="about-hero-bg"
-                    src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2000&auto=format&fit=crop"
+                    src="/images/about-photo.jpg"
                     alt="Jacey Chen Portrait"
                 />
                 {/* 深灰蓝渐变遮罩 */}
@@ -276,19 +276,11 @@ export default function Page() {
                             <span className="about-mk">Connect</span>
                             <span className="about-mv">
                                 <a
-                                    href="https://www.linkedin.com/in/jacey-chen/"
+                                    href="https://www.linkedin.com/in/jaceychen/"
                                     target="_blank"
                                     rel="noreferrer"
                                 >
                                     LinkedIn ↗
-                                </a>
-                            </span>
-                        </div>
-                        <div className="about-meta-row">
-                            <span className="about-mk">Inquiries</span>
-                            <span className="about-mv">
-                                <a href="mailto:hello@jaceychen.com">
-                                    hello@jaceychen.com
                                 </a>
                             </span>
                         </div>
@@ -387,6 +379,33 @@ export default function Page() {
             <section className="resume-section scroll-reveal">
                 <h2 className="resume-header">Recognition</h2>
                 <div className="resume-list">
+                    <div className="resume-row">
+                        <span className="res-date">April 2026</span>
+                        <div>
+                            <div className="res-title">
+                                INDIGO Awards
+                            </div>
+                        </div>
+                        <span className="res-role">Silver - Branding for Graphic Design; Bronze - Branding for Sports</span>
+                    </div>
+                    <div className="resume-row">
+                        <span className="res-date">November 2025</span>
+                        <div>
+                            <div className="res-title">
+                                Design Intelligence Award
+                            </div>
+                        </div>
+                        <span className="res-role">Honorable Mention Award</span>
+                    </div>
+                    <div className="resume-row">
+                        <span className="res-date">June 2024</span>
+                        <div>
+                            <div className="res-title">
+                                Core77 Design Awards
+                            </div>
+                        </div>
+                        <span className="res-role">Student Notable</span>
+                    </div>
                     <div className="resume-row">
                         <span className="res-date">May 2024</span>
                         <div>
