@@ -529,31 +529,19 @@ export default function Page() {
                         </div>
 
                         {/* Art direction reference screenshots (4 long images) */}
-                        <div className="pd-series-label scroll-reveal">
-                            <span>Art Direction References</span>
-                            <span className="pd-series-count">4 pieces</span>
+                        <div className="pd-img-2col pd-img-group scroll-reveal"
+                            style={{ height: '500px', overflow: 'hidden' }}>
+                            <img src="/images/sanvo/photography-draft5.png" alt="Art Direction Ref 01"
+                                style={{ objectFit: 'contain', minHeight: 0, background: '#111' }} />
+                            <img src="/images/sanvo/photography-draft2.webp" alt="Art Direction Ref 02"
+                                style={{ objectFit: 'contain', minHeight: 0, background: '#111' }} />
                         </div>
-                        {/* 2col + 2col for 4 long screenshots */}
-                        <div className="pd-img-2col pd-img-group scroll-reveal">
-                            {/* TODO: 替换成美术稿长图截图 */}
-                            <img
-                                src="/images/sanvo/photography-draft5.png"
-                                alt="Art Direction Ref 01"
-                            />
-                            <img
-                                src="/images/sanvo/photography-draft2.webp"
-                                alt="Art Direction Ref 02"
-                            />
-                        </div>
-                        <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img
-                                src="/images/sanvo/photography-draft3.webp"
-                                alt="Art Direction Ref 03"
-                            />
-                            <img
-                                src="/images/sanvo/photography-draft1.webp"
-                                alt="Art Direction Ref 04"
-                            />
+                        <div className="pd-img-2col pd-img-group scroll-reveal"
+                            style={{ height: '500px', overflow: 'hidden' }}>
+                            <img src="/images/sanvo/photography-draft3.webp" alt="Art Direction Ref 03"
+                                style={{ objectFit: 'contain', minHeight: 0, background: '#111' }} />
+                            <img src="/images/sanvo/photography-draft1.webp" alt="Art Direction Ref 04"
+                                style={{ objectFit: 'contain', minHeight: 0, background: '#111' }} />
                         </div>
 
                         {/* Final closing image */}
