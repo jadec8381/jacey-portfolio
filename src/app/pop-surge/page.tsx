@@ -446,31 +446,27 @@ export default function Page() {
                         <div className="pd-img-3col pd-img-group scroll-reveal">
                             {/* TODO: 替换成 6 张 logo & illustration 图 */}
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
+                                src="/images/popsurge/pop-logored.png"
                                 alt="Logo 1"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
+                                src="/images/popsurge/pop-yellow.png"
                                 alt="Logo 2"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
+                                src="/images/popsurge/pop-logogrid.png"
                                 alt="Logo 3"
                             />
                         </div>
-                        <div className="pd-img-3col pd-img-group scroll-reveal">
-                            {/* TODO: 替换成剩余 3 张 */}
+                        <div className="pd-img-2col pd-img-group scroll-reveal">
+                            {/* TODO: 替换成剩余 2 张 */}
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
+                                src="/images/popsurge/pop-logofamily.png"
                                 alt="Illustration 1"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
+                                src="/images/popsurge/pop-icons.png"
                                 alt="Illustration 2"
-                            />
-                            <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
-                                alt="Illustration 3"
                             />
                         </div>
 
@@ -493,41 +489,41 @@ export default function Page() {
                         <div className="pd-img-2col pd-img-group scroll-reveal">
                             {/* TODO: 替换成 poster 图 */}
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
+                                src="/images/popsurge/pop-poster4.png"
                                 alt="Poster 1"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
+                                src="/images/popsurge/pop-poster8.png"
                                 alt="Poster 2"
                             />
                         </div>
                         <div className="pd-img-3col pd-img-group scroll-reveal">
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
+                                src="/images/popsurge/pop-poster2.png"
                                 alt="Poster 3"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
+                                src="/images/popsurge/pop-poster3.png"
                                 alt="Poster 4"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
+                                src="/images/popsurge/pop-poster5.png"
                                 alt="Poster 5"
                             />
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
+                                src="/images/popsurge/pop-poster1.png"
                                 alt="Poster 6"
                             />
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
+                                src="/images/popsurge/pop-poster6.png"
                                 alt="Poster 7"
                             />
                         </div>
                         <div className="pd-img-full pd-img-group scroll-reveal">
                             <img
-                                src="https://images.squarespace-cdn.com/content/v1/6391439e98db89152adb614f/b21ad9dd-e0b2-4deb-a91b-9964ff0b9415/Poster7.png"
+                                src="/images/popsurge/pop-poster7.png"
                                 alt="Poster 8"
                             />
                         </div>
@@ -575,6 +571,28 @@ export default function Page() {
 
                         {/* Awards list */}
                         <div className="pd-awards scroll-reveal">
+                            <div className="pd-award-item">
+                                <span className="pd-award-name">
+                                    INDIGO Awards 2026
+                                </span>
+                                <span className="pd-award-detail">
+                                    April 2026
+                                    <span className="pd-award-badge">
+                                        Silver in Branding for Graphic Design; Bronze in Branding for Sports
+                                    </span>
+                                </span>
+                            </div>
+                            <div className="pd-award-item">
+                                <span className="pd-award-name">
+                                    Design Intelligence Award 2025
+                                </span>
+                                <span className="pd-award-detail">
+                                    November 2025
+                                    <span className="pd-award-badge">
+                                        Honorable Mention Award
+                                    </span>
+                                </span>
+                            </div>
                             <div className="pd-award-item">
                                 <span className="pd-award-name">
                                     Core77 Design Awards
