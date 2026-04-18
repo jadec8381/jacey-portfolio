@@ -578,7 +578,7 @@ export default function Page() {
                                 <span className="pd-award-detail">
                                     April 2026
                                     <span className="pd-award-badge">
-                                        Silver in Branding for Graphic Design; Bronze in Branding for Sports
+                                        Silver - Branding for Graphic Design; Bronze - Branding for Sports
                                     </span>
                                 </span>
                             </div>
