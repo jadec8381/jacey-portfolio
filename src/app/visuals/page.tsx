@@ -334,7 +334,7 @@ export default function Page() {
                         style={{ aspectRatio: "4/3" }}
                     >
                         <img
-                            src="/images/4d6/4d6-hero.webp"
+                            src="/images/4d6/4d6-branding06.png"
                             alt="4D6 Esports Wellness"
                         />
                     </div>

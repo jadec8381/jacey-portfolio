@@ -338,12 +338,12 @@ export default function Page() {
                         {/* Logo drafts — 2x2 grid */}
                         <div className="pd-img-2col pd-img-group scroll-reveal">
                             {/* TODO: 替换成 4 张 logo draft */}
-                            <img src={PH} alt="Logo Draft 1" />
-                            <img src={PH} alt="Logo Draft 2" />
+                            <img src="/images/4d6/4d6-draft4.webp" alt="Logo Draft 1" />
+                            <img src="/images/4d6/4d6-draft3.webp" alt="Logo Draft 2" />
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Logo Draft 3" />
-                            <img src={PH} alt="Logo Draft 4" />
+                            <img src="/images/4d6/4d6-draft2.webp" alt="Logo Draft 3" />
+                            <img src="/images/4d6/4d6-draft1.webp" alt="Logo Draft 4" />
                         </div>
                         <p className="pd-img-caption scroll-reveal">
                             Logo exploration drafts — iterating from concept to
@@ -353,7 +353,7 @@ export default function Page() {
                         {/* Finalized logo — full width hero moment */}
                         <div className="pd-img-full pd-img-group scroll-reveal">
                             {/* TODO: 替换成 finalized logo */}
-                            <img src={PH} alt="4D6 Final Logo" />
+                            <img src="/images/4d6/4d6-logofinal.webp" alt="Final Logo" />
                             <p className="pd-img-caption">Finalized logomark</p>
                         </div>
 
@@ -373,16 +373,16 @@ export default function Page() {
                         {/* Mockups — mixed layouts for 6 images */}
                         <div className="pd-img-full pd-img-group scroll-reveal">
                             {/* TODO: 替换成 mockup hero shot */}
-                            <img src={PH} alt="Mockup 1" />
+                            <img src="/images/4d6/4d6-branding07.png" alt="Mockup 1" />
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Mockup 2" />
-                            <img src={PH} alt="Mockup 3" />
+                            <img src="/images/4d6/4d6-branding05.png" alt="Mockup 2" />
+                            <img src="/images/4d6/4d6-branding01.png" alt="Mockup 3" />
                         </div>
                         <div className="pd-img-3col pd-img-group scroll-reveal">
-                            <img src={PH} alt="Mockup 4" />
-                            <img src={PH} alt="Mockup 5" />
-                            <img src={PH} alt="Mockup 6" />
+                            <img src="/images/4d6/4d6-branding02.png" alt="Mockup 4" />
+                            <img src="/images/4d6/4d6-branding03.png" alt="Mockup 5" />
+                            <img src="/images/4d6/4d6-branding04.png" alt="Mockup 6" />
                         </div>
                     </div>
 
@@ -411,7 +411,7 @@ export default function Page() {
 
                         {/* Thesis presentation video */}
                         <a
-                            href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
+                            href="https://youtu.be/c_Wdun6XXEc?si=zhkl4wbbtFz6qN6D"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ textDecoration: "none" }}
