@@ -449,7 +449,7 @@ export default function Page() {
                             <div className="pd-roster-item">
                                 <div className="pd-roster-name">Icona Pop</div>
                                 <div className="pd-roster-role">
-                                    Release artwork & social
+                                    Release music platform socials
                                 </div>
                             </div>
                             <div className="pd-roster-item">
