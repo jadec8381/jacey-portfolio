@@ -285,8 +285,8 @@ export default function Page() {
                         <span className="date-text">2023</span>
                         <div className="pill-group">
                             <span className="pill">MUSIC</span>
-                            <span className="pill">ALBUM ART</span>
-                            <span className="pill">MOTION</span>
+                            <span className="pill">ALBUM ARTWORKS</span>
+                            <span className="pill">SOCIAL MEDIA</span>
                         </div>
                     </div>
                     <h3 className="vis-title">ULTRA RECORDS</h3>
