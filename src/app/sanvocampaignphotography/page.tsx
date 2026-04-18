@@ -531,7 +531,7 @@ export default function Page() {
                         {/* Art direction reference screenshots (4 long images) */}
                         <div className="pd-img-2col pd-img-group scroll-reveal"
                             style={{ height: '500px', overflow: 'hidden' }}>
-                            <img src="/images/sanvo/photography-draft5.png" alt="Art Direction Ref 01"
+                            <img src="/images/sanvo/photography-draft1.webp" alt="Art Direction Ref 01"
                                 style={{ objectFit: 'contain', minHeight: 0, background: '#111' }} />
                             <img src="/images/sanvo/photography-draft2.webp" alt="Art Direction Ref 02"
                                 style={{ objectFit: 'contain', minHeight: 0, background: '#111' }} />
@@ -540,7 +540,7 @@ export default function Page() {
                             style={{ height: '500px', overflow: 'hidden' }}>
                             <img src="/images/sanvo/photography-draft3.webp" alt="Art Direction Ref 03"
                                 style={{ objectFit: 'contain', minHeight: 0, background: '#111' }} />
-                            <img src="/images/sanvo/photography-draft1.webp" alt="Art Direction Ref 04"
+                            <img src="/images/sanvo/photography-draft4.webp" alt="Art Direction Ref 04"
                                 style={{ objectFit: 'contain', minHeight: 0, background: '#111' }} />
                         </div>
 
