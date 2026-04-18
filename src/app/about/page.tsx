@@ -242,7 +242,7 @@ export default function Page() {
                 {/* 替换成你抱着烤面包机的那张图片URL！ */}
                 <img
                     className="about-hero-bg"
-                    src="/images/about-photo.jpg"
+                    src="/images/about-photo.JPG"
                     alt="Jacey Chen Portrait"
                 />
                 {/* 深灰蓝渐变遮罩 */}
