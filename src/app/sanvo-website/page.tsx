@@ -481,14 +481,16 @@ export default function Page() {
                         </div>
 
                         {/* 示范：2:1 asymmetric */}
-                        <div className="pd-img-2to1 pd-img-group scroll-reveal">
+                        <div className="pd-img-2col pd-img-group scroll-reveal">
                             <img
                                 src="/images/sanvo/website-detail03.png"
-                                alt="SANVO Desktop View 1"
+                                alt="SANVO Product Listing"
+                                style={{ objectFit: "contain", background: "#111" }}
                             />
                             <img
                                 src="/images/sanvo/website-detail05.png"
-                                alt="SANVO Desktop View 2"
+                                alt="SANVO Product Detail"
+                                style={{ objectFit: "contain", background: "#111" }}
                             />
                         </div>
                     </div>
