@@ -479,16 +479,11 @@ export default function Page() {
                         </div>
 
                         {/* MVP screens */}
-                        <div className="pd-img-2col pd-img-group scroll-reveal">
-                            {/* TODO: 替换成 MVP V1 的 screens */}
-                            <img
-                                src="/images/apollo/apollo-apps02.webp"
-                                alt="Apollo Concept Screens"
-                            />
-                            <img
-                                src="/images/apollo/apollo-apps01.webp"
-                                alt="Apollo MVP V1 Screen 1"
-                            />
+                        <div className="pd-img-full pd-img-group scroll-reveal">
+                            <img src="/images/apollo/apollo-apps02.webp" alt="Apollo Concept Screens" />
+                        </div>
+                        <div className="pd-img-full pd-img-group scroll-reveal">
+                            <img src="/images/apollo/apollo-apps01.webp" alt="Apollo MVP V1 Screen 1" />
                         </div>
 
                         <div className="pd-text-block scroll-reveal">
@@ -516,21 +511,14 @@ export default function Page() {
                         </div>
 
                         {/* Reiterated screens */}
-                        <div className="pd-img-mixed pd-img-group scroll-reveal">
-                            {/* TODO: 替换成 MVP V2 的 screens */}
-                            <img
-                                className="img-span-full"
-                                src="/images/apollo/apollo-apps06.webp"
-                                alt="Apollo Internal Feedback"
-                            />
-                            <img
-                                src="/images/apollo/apollo-apps03.webp"
-                                alt="Apollo MVP 2 Screen 1"
-                            />
-                            <img
-                                src="/images/apollo/apollo-apps04.webp"
-                                alt="Apollo MVP 2 Screen 2"
-                            />
+                        <div className="pd-img-full pd-img-group scroll-reveal">
+                            <img src="/images/apollo/apollo-apps06.webp" alt="Apollo Internal Feedback" />
+                        </div>
+                        <div className="pd-img-full pd-img-group scroll-reveal">
+                            <img src="/images/apollo/apollo-apps03.webp" alt="Apollo MVP 2 Screen 1" />
+                        </div>
+                        <div className="pd-img-full pd-img-group scroll-reveal">
+                            <img src="/images/apollo/apollo-apps04.webp" alt="Apollo MVP 2 Screen 2" />
                         </div>
 
                         <div className="pd-text-block scroll-reveal">
