@@ -393,98 +393,92 @@ export default function Page() {
                             </div>
                         </div>
 
-                        {/* Social reels — 2x2 grid (vertical aspect ratio) */}
-                        <div className="pd-img-2col pd-img-group scroll-reveal">
-                            {/* TODO: 替换成 4 张 reel 截图（9:16 竖版） */}
-                            <img
-                                src="/videos/ultra/ultra-tk01.mp4"
-                                alt="Reel 1"
-                            />
-                            <img
-                                src="/videos/ultra/ultra-tk02.mp4"
-                                alt="Reel 2"
-                            />
+                        {/* Social reels — 2x2 grid (vertical video) */}
+                        <div className="pd-img-2col scroll-reveal" style={{ gap: '16px' }}>
+                            <video autoPlay loop muted playsInline style={{ width: '100%', borderRadius: '4px' }}>
+                                <source src="/videos/ultra/ultra-tk01.mp4" type="video/mp4" />
+                            </video>
+                            <video autoPlay loop muted playsInline style={{ width: '100%', borderRadius: '4px' }}>
+                                <source src="/videos/ultra/ultra-tk02.mp4" type="video/mp4" />
+                            </video>
                         </div>
-                        <div className="pd-img-2col pd-img-group scroll-reveal">
-                            <img
-                                src="/videos/ultra/ultra-tk03.mp4"
-                                alt="Reel 3"
-                            />
-                            <img
-                                src="/videos/ultra/ultra-tk04.mp4"
-                                alt="Reel 4"
-                            />
-                        </div>
-                    </div>
-
-                    {/* ── 03: Roster ── */}
-                    <div
-                        className="pd-section"
-                        data-num="03"
-                        data-label="Roster"
-                    >
-                        <div className="pd-text-block scroll-reveal">
-                            <div className="pd-text-title">Artist Roster</div>
-                            <div className="pd-text-content">
-                                <h3>Collaborations</h3>
-                                <p>
-                                    Worked across a diverse roster of
-                                    electronic, pop, and dance artists — each
-                                    requiring a unique visual approach while
-                                    maintaining Ultra Records' overarching brand
-                                    standards.
-                                </p>
-                            </div>
+                        <div className="pd-img-2col scroll-reveal" style={{ gap: '16px' }}>
+                            <video autoPlay loop muted playsInline style={{ width: '100%', borderRadius: '4px' }}>
+                                <source src="/videos/ultra/ultra-tk03.mp4" type="video/mp4" />
+                            </video>
+                            <video autoPlay loop muted playsInline style={{ width: '100%', borderRadius: '4px' }}>
+                                <source src="/videos/ultra/ultra-tk04.mp4" type="video/mp4" />
+                            </video>
                         </div>
 
-                        <div className="pd-roster scroll-reveal">
-                            <div className="pd-roster-item">
-                                <div className="pd-roster-name">
-                                    Luca Schreiner
-                                </div>
-                                <div className="pd-roster-role">
-                                    Release artwork & social
-                                </div>
-                            </div>
-                            <div className="pd-roster-item">
-                                <div className="pd-roster-name">Icona Pop</div>
-                                <div className="pd-roster-role">
-                                    Release music platform socials
-                                </div>
-                            </div>
-                            <div className="pd-roster-item">
-                                <div className="pd-roster-name">
-                                    Mahmut Orhan
-                                </div>
-                                <div className="pd-roster-role">
-                                    Release social
+                        {/* ── 03: Roster ── */}
+                        <div
+                            className="pd-section"
+                            data-num="03"
+                            data-label="Roster"
+                        >
+                            <div className="pd-text-block scroll-reveal">
+                                <div className="pd-text-title">Artist Roster</div>
+                                <div className="pd-text-content">
+                                    <h3>Collaborations</h3>
+                                    <p>
+                                        Worked across a diverse roster of
+                                        electronic, pop, and dance artists — each
+                                        requiring a unique visual approach while
+                                        maintaining Ultra Records' overarching brand
+                                        standards.
+                                    </p>
                                 </div>
                             </div>
-                            <div className="pd-roster-item">
-                                <div className="pd-roster-name">
-                                    Luca Schreiner
+
+                            <div className="pd-roster scroll-reveal">
+                                <div className="pd-roster-item">
+                                    <div className="pd-roster-name">
+                                        Luca Schreiner
+                                    </div>
+                                    <div className="pd-roster-role">
+                                        Release artwork & social
+                                    </div>
                                 </div>
-                                <div className="pd-roster-role">
-                                    Release artwork & visualizer
+                                <div className="pd-roster-item">
+                                    <div className="pd-roster-name">Icona Pop</div>
+                                    <div className="pd-roster-role">
+                                        Release music platform socials
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="pd-roster-item">
-                                <div className="pd-roster-name">Faul & Wad</div>
-                                <div className="pd-roster-role">
-                                    Release artwork & social
+                                <div className="pd-roster-item">
+                                    <div className="pd-roster-name">
+                                        Mahmut Orhan
+                                    </div>
+                                    <div className="pd-roster-role">
+                                        Release social
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="pd-roster-item">
-                                <div className="pd-roster-name">
-                                    Steve Aoki ft. BTS Catalog
+                                <div className="pd-roster-item">
+                                    <div className="pd-roster-name">
+                                        Luca Schreiner
+                                    </div>
+                                    <div className="pd-roster-role">
+                                        Release artwork & visualizer
+                                    </div>
                                 </div>
-                                <div className="pd-roster-role">
-                                    Catalog content & assets
+                                <div className="pd-roster-item">
+                                    <div className="pd-roster-name">Faul & Wad</div>
+                                    <div className="pd-roster-role">
+                                        Release artwork & social
+                                    </div>
+                                </div>
+                                <div className="pd-roster-item">
+                                    <div className="pd-roster-name">
+                                        Steve Aoki ft. BTS Catalog
+                                    </div>
+                                    <div className="pd-roster-role">
+                                        Catalog content & assets
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
 
             {/* ══════════ NEXT ══════════ */}
