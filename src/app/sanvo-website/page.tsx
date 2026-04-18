@@ -471,11 +471,11 @@ export default function Page() {
                         {/* 示范：2-col 等宽双图 */}
                         <div className="pd-img-2col pd-img-group scroll-reveal">
                             <img
-                                src="/images/sanvo/website-wip3.webp"
+                                src="/images/sanvo/website-detail01.png"
                                 alt="SANVO Visual System 1"
                             />
                             <img
-                                src="/images/sanvo/website-wip4.webp"
+                                src="/images/sanvo/website-detail02.png"
                                 alt="SANVO Visual System 2"
                             />
                         </div>
@@ -508,11 +508,11 @@ export default function Page() {
                         {/* 示范：2:1 asymmetric */}
                         <div className="pd-img-2to1 pd-img-group scroll-reveal">
                             <img
-                                src="/images/sanvo/website-desktop1.png"
+                                src="/images/sanvo/website-detail03.png"
                                 alt="SANVO Desktop View 1"
                             />
                             <img
-                                src="/images/sanvo/website-desktop2.png"
+                                src="/images/sanvo/website-detail05.png"
                                 alt="SANVO Desktop View 2"
                             />
                         </div>
