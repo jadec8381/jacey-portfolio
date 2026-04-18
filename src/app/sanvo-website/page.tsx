@@ -360,6 +360,23 @@ export default function Page() {
                             <span className="mk">Stack</span>
                             <span className="mv">React, Tailwind CSS, CMS</span>
                         </div>
+                        <div className="pd-meta-row">
+                            <span className="mk">Demo</span>
+                            <span className="mv">
+                                <a
+                                    href="https://sanvo2026website.vercel.app/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{
+                                        color: "var(--white)",
+                                        textDecoration: "underline",
+                                        textUnderlineOffset: "4px",
+                                    }}
+                                >
+                                    View Live Demo ↗
+                                </a>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -592,6 +609,53 @@ export default function Page() {
                                 src="/images/sanvo/website-wip3.webp"
                                 alt="SANVO Final Showcase"
                             />
+                        </div>
+
+                        {/* Demo CTA */}
+                        <div
+                            className="scroll-reveal"
+                            style={{
+                                borderTop: "1px solid var(--rule-lt)",
+                                paddingTop: "32px",
+                                display: "flex",
+                                justifyContent: "center",
+                            }}
+                        >
+                            <a
+                                href="https://sanvo2026website.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    gap: "12px",
+                                    padding: "16px 40px",
+                                    border: "1px solid rgba(255,255,255,0.25)",
+                                    borderRadius: "4px",
+                                    color: "var(--white)",
+                                    textDecoration: "none",
+                                    fontFamily: "'Barlow', sans-serif",
+                                    fontWeight: 600,
+                                    fontSize: "14px",
+                                    letterSpacing: "1px",
+                                    textTransform: "uppercase",
+                                    transition: "all 0.3s",
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.borderColor =
+                                        "rgba(255,255,255,0.6)";
+                                    e.currentTarget.style.background =
+                                        "rgba(255,255,255,0.04)";
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.borderColor =
+                                        "rgba(255,255,255,0.25)";
+                                    e.currentTarget.style.background =
+                                        "transparent";
+                                }}
+                            >
+                                View Live Demo <span>↗</span>
+                            </a>
                         </div>
                     </div>
                 </div>
