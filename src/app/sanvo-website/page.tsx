@@ -479,6 +479,18 @@ export default function Page() {
                                 alt="SANVO Visual System 2"
                             />
                         </div>
+
+                        {/* 示范：2:1 asymmetric */}
+                        <div className="pd-img-2to1 pd-img-group scroll-reveal">
+                            <img
+                                src="/images/sanvo/website-detail03.png"
+                                alt="SANVO Desktop View 1"
+                            />
+                            <img
+                                src="/images/sanvo/website-detail05.png"
+                                alt="SANVO Desktop View 2"
+                            />
+                        </div>
                     </div>
 
                     {/* ── Section 03: Execution ── */}
@@ -503,18 +515,6 @@ export default function Page() {
                                     integration, and API specs.
                                 </p>
                             </div>
-                        </div>
-
-                        {/* 示范：2:1 asymmetric */}
-                        <div className="pd-img-2to1 pd-img-group scroll-reveal">
-                            <img
-                                src="/images/sanvo/website-detail03.png"
-                                alt="SANVO Desktop View 1"
-                            />
-                            <img
-                                src="/images/sanvo/website-detail05.png"
-                                alt="SANVO Desktop View 2"
-                            />
                         </div>
 
                         {/* 示范：Mixed — 1 full + 2 half */}
