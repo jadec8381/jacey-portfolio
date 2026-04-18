@@ -537,7 +537,7 @@ export default function Page() {
                         <div className="pd-img-2col pd-img-group scroll-reveal">
                             {/* TODO: 替换成美术稿长图截图 */}
                             <img
-                                src="/images/sanvo/photography-draft1.webp"
+                                src="/images/sanvo/photography-draft5.png"
                                 alt="Art Direction Ref 01"
                             />
                             <img
@@ -551,7 +551,7 @@ export default function Page() {
                                 alt="Art Direction Ref 03"
                             />
                             <img
-                                src="/images/sanvo/photography-draft4.webp"
+                                src="/images/sanvo/photography-draft1.webp"
                                 alt="Art Direction Ref 04"
                             />
                         </div>
