@@ -498,8 +498,13 @@ export default function Page() {
                         </div>
 
                         {/* 示范：2:1 asymmetric */}
-                        <div className="pd-img-2col pd-img-group scroll-reveal"
-                            style={{ height: "600px", alignItems: "center" }}
+                        <div
+                            className="pd-img-2col pd-img-group scroll-reveal"
+                            style={{
+                                height: "600px",
+                                alignItems: "center",
+                                overflow: "hidden",
+                            }}
                         >
                             <img
                                 src="/images/sanvo/website-detail03.png"
@@ -507,18 +512,20 @@ export default function Page() {
                                 style={{
                                     objectFit: "contain",
                                     height: "100%",
-                                    background: "#111",
+                                    minHeight: 0,    /* 加这个覆盖 grid 的 min-height: auto */
+                                    background: '#111',
                                 }}
                             />
                             <img
                                 src="/images/sanvo/website-detail05.png"
                                 alt="SANVO Product Detail"
                                 style={{
-                                    objectFit: "contain",
-                                    height: "100%",
-                                    maxWidth: "80%",
-                                    margin: "0 auto",
-                                    background: "#111",
+                                    objectFit: 'contain',
+                                    height: '100%',
+                                    minHeight: 0,    /* 同上 */
+                                    maxWidth: '80%',
+                                    margin: '0 auto',
+                                    background: '#111',
                                 }}
                             />
                         </div>
