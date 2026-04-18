@@ -108,11 +108,9 @@ export default function Page() {
                 .pd-service-label { font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray-light); line-height: 1.4; }
 
                 /* Video */
-                .pd-video-wrap { width: 100%; aspect-ratio: 16/9; background: #111; border-radius: 4px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; cursor: pointer; transition: all 0.3s; }
-                .pd-video-wrap:hover { background: #1a1a1a; }
-                .pd-video-label { font-family: 'Space Mono', monospace; font-size: 13px; color: var(--gray-text); text-transform: uppercase; letter-spacing: 2px; }
-                .pd-video-play { width: 64px; height: 64px; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: rgba(255,255,255,0.6); position: absolute; transition: all 0.3s; }
-                .pd-video-wrap:hover .pd-video-play { border-color: var(--white); color: var(--white); transform: scale(1.1); }
+                .pd-video-embed { width: 100%; aspect-ratio: 16/9; background: #111; border-radius: 4px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; cursor: pointer; transition: all 0.3s; }
+                .pd-video-embed:hover { background: #1a1a1a; }
+                .pd-video-embed iframe { width: 100%; height: 100%; border: none; border-radius: 4px; }
 
                 .pd-img-group img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; transition: filter 0.4s ease; filter: brightness(0.9); }
                 .pd-img-group:hover img { filter: brightness(1); }
@@ -416,12 +414,15 @@ export default function Page() {
                             rel="noopener noreferrer"
                             style={{ textDecoration: "none" }}
                         >
-                            <div className="pd-video-wrap scroll-reveal">
-                                {/* TODO: 替换 href 里的 YOUR_VIDEO_ID 成实际 YouTube ID */}
-                                <div className="pd-video-play">▶</div>
-                                <span className="pd-video-label">
-                                    Thesis Presentation — Watch on YouTube
-                                </span>
+                            <div className="pd-video-embed scroll-reveal">
+                                <iframe
+                                    src="https://www.youtube.com/embed/c_Wdun6XXEc"
+                                    title="4D6 Thesis Presentation"
+                                    width="100%"
+                                    style={{ aspectRatio: '16/9', border: 'none', borderRadius: '4px' }}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                />
                             </div>
                         </a>
                     </div>
