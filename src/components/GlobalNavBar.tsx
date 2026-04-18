@@ -1,23 +1,16 @@
 "use client";
 import React, { useState, useEffect } from "react"
-// 🌟 第一步：引入 Link 组件
 import Link from "next/link"
-// 🌟 第二步：引入 usePathname 来实现“当前页面高亮” (可选)
 import { usePathname } from "next/navigation"
 
 export default function GlobalNavBar() {
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    // 🌟 第三步：获取当前路径
     const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 20) {
-                setIsScrolled(true)
-            } else {
-                setIsScrolled(false)
-            }
+            setIsScrolled(window.scrollY > 20)
         }
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)
@@ -25,11 +18,7 @@ export default function GlobalNavBar() {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
-        if (!isMenuOpen) {
-            document.body.style.overflow = "hidden"
-        } else {
-            document.body.style.overflow = "auto"
-        }
+        document.body.style.overflow = !isMenuOpen ? "hidden" : "auto"
     }
 
     return (
@@ -42,24 +31,33 @@ export default function GlobalNavBar() {
                     --nav-gray: #999;
                 }
 
-                /* 强制清零所有自带缩进 */
                 .global-nav-wrapper *, .mobile-menu-overlay * { 
                     box-sizing: border-box; 
                     margin: 0; 
                     padding: 0; 
                 }
-                
+
+                /* 🌟 核心改动：fixed on top */
                 .global-nav-wrapper {
-                    position: relative;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
                     width: 100%;
                     font-family: 'Barlow', sans-serif;
                     color: var(--nav-white);
-                    background: ${isScrolled ? "rgba(10, 13, 20, 0.85)" : "var(--nav-bg)"};
-                    backdrop-filter: ${isScrolled ? "blur(12px)" : "none"};
-                    -webkit-backdrop-filter: ${isScrolled ? "blur(12px)" : "none"};
+                    background: ${isScrolled ? "rgba(10, 13, 20, 0.92)" : "var(--nav-bg)"};
+                    backdrop-filter: ${isScrolled ? "blur(16px)" : "none"};
+                    -webkit-backdrop-filter: ${isScrolled ? "blur(16px)" : "none"};
                     border-bottom: 1px solid var(--nav-rule);
                     transition: all 0.3s ease;
                     z-index: 999;
+                }
+
+                /* 🌟 spacer 撑开 nav 高度，防止内容被遮挡 */
+                .nav-spacer {
+                    width: 100%;
+                    height: 73px; /* 跟 nav 实际高度一致 */
                 }
 
                 .nav-grid {
@@ -84,8 +82,12 @@ export default function GlobalNavBar() {
                     justify-content: flex-end; 
                 }
 
-                .nav-logo { font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; }
-                .nav-logo .square { display: inline-block; width: 6px; height: 6px; background: var(--nav-white); margin-right: 8px; vertical-align: middle; margin-top:-2px;}
+                .nav-logo { 
+                    font-family: 'Oswald', sans-serif; font-size: 14px; 
+                    font-weight: 700; letter-spacing: 2px; 
+                    text-decoration: none; color: var(--nav-white);
+                }
+                .nav-logo .square { display: inline-block; width: 6px; height: 6px; background: var(--nav-white); margin-right: 8px; vertical-align: middle; margin-top: -2px; }
                 
                 .nav-links { display: flex; gap: 32px; list-style: none; }
                 .nav-links a { color: var(--nav-gray); text-decoration: none; transition: color 0.3s; }
@@ -111,7 +113,6 @@ export default function GlobalNavBar() {
                 }
                 .mobile-menu-overlay.open { transform: translateY(0); }
                 
-                /* 核心修复：绝对清零列表自带 padding，并锁定 100% 宽度居中 */
                 .mobile-nav-links { 
                     list-style: none; 
                     text-align: center; 
@@ -134,38 +135,37 @@ export default function GlobalNavBar() {
                 .mobile-nav-links a:hover { color: var(--nav-white); }
                 .mobile-nav-footer { position: absolute; bottom: 40px; font-family: 'Space Mono', monospace; font-size: 10px; color: var(--nav-gray); letter-spacing: 2px; text-align: center; width: 100%; }
 
-                /* ══════════════════════════════
-                   响应式断点 1：TABLET
-                   ══════════════════════════════ */
                 @media (max-width: 1024px) {
                     .nav-grid { grid-template-columns: 1.5fr 2fr 1.5fr; }
                     .nav-col { padding: 20px 32px; } 
                     .nav-col:nth-child(4) { display: none; }
-                    .nav-col:nth-child(3) { justify-content: flex-end; border-right: none;} 
+                    .nav-col:nth-child(3) { justify-content: flex-end; border-right: none; } 
+                    .nav-spacer { height: 65px; }
                 }
 
-                /* ══════════════════════════════
-                   响应式断点 2：MOBILE
-                   ══════════════════════════════ */
                 @media (max-width: 768px) {
-                    .global-nav-wrapper { border-bottom: none; background: transparent; backdrop-filter: none; }
+                    .global-nav-wrapper { 
+                        border-bottom: none; 
+                        background: ${isScrolled ? "rgba(10, 13, 20, 0.92)" : "var(--nav-bg)"};
+                        backdrop-filter: ${isScrolled ? "blur(16px)" : "none"};
+                    }
                     .nav-grid { 
                         display: flex; justify-content: space-between; align-items: center; 
                         padding: 20px 24px; 
-                        border-bottom: 1px solid var(--nav-rule); background: var(--nav-bg); 
+                        border-bottom: 1px solid var(--nav-rule);
                         position: relative; z-index: 999;
                     }
-                    
                     .nav-col { padding: 0; border-right: none; }
                     .nav-col:nth-child(2), .nav-col:nth-child(3) { display: none; }
                     .mobile-toggle { display: block; }
+                    .nav-spacer { height: 61px; }
                 }
             `}</style>
 
+            {/* Fixed nav bar */}
             <div className="global-nav-wrapper">
                 <div className="nav-grid">
                     <div className="nav-col">
-                        {/* 🌟 回首页：点击 Logo 回到 / */}
                         <Link href="/" className="nav-logo">
                             <span className="square"></span>JACEY CHEN
                         </Link>
@@ -173,13 +173,11 @@ export default function GlobalNavBar() {
                     <div className="nav-col">
                         <ul className="nav-links">
                             <li>
-                                {/* 🌟 链接到 /products 文件夹 */}
                                 <Link href="/products" className={pathname === "/products" ? "active" : ""}>
                                     Product
                                 </Link>
                             </li>
                             <li>
-                                {/* 🌟 链接到 /visuals 文件夹 */}
                                 <Link href="/visuals" className={pathname === "/visuals" ? "active" : ""}>
                                     Visual
                                 </Link>
@@ -208,32 +206,16 @@ export default function GlobalNavBar() {
                 </div>
             </div>
 
+            {/* 🌟 Spacer：撑开固定导航栏的高度 */}
+            <div className="nav-spacer" />
+
+            {/* Mobile menu overlay */}
             <div className={`mobile-menu-overlay ${isMenuOpen ? "open" : ""}`}>
                 <ul className="mobile-nav-links">
-                    <li>
-                        {/* 🌟 链接到 / 根目录 */}
-                        <Link href="/" onClick={toggleMenu}>
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        {/* 🌟 链接到 /products 文件夹 */}
-                        <Link href="/products" onClick={toggleMenu}>
-                            Product
-                        </Link>
-                    </li>
-                    <li>
-                        {/* 🌟 链接到 /visuals 文件夹 */}
-                        <Link href="/visuals" onClick={toggleMenu}>
-                            Visual
-                        </Link>
-                    </li>
-                    <li>
-                        {/* 🌟 链接到 /about 文件夹 */}
-                        <Link href="/about" onClick={toggleMenu}>
-                            About
-                        </Link>
-                    </li>
+                    <li><Link href="/" onClick={toggleMenu}>Home</Link></li>
+                    <li><Link href="/products" onClick={toggleMenu}>Product</Link></li>
+                    <li><Link href="/visuals" onClick={toggleMenu}>Visual</Link></li>
+                    <li><Link href="/about" onClick={toggleMenu}>About</Link></li>
                 </ul>
                 <div className="mobile-nav-footer">
                     GRID SYSTEM: ON / NYC ©2026
