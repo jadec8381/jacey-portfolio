@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import GlobalNavBar from "../components/GlobalNavBar";
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <GlobalNavBar />
         {children}
+        <Analytics />
         <Script
           type="module"
           src="https://unpkg.com/@splinetool/viewer@1.0.28/build/spline-viewer.js"
