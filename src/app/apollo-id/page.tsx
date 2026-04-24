@@ -157,12 +157,12 @@ export default function Page() {
                     color: var(--gray-text); text-transform: uppercase; letter-spacing: 1px;
                 }
 
-                .pd-img-group { position: relative; }
-                .pd-img-group img {
-                    width: 100%; height: 100%; object-fit: cover; border-radius: 4px;
+                .pd-img-group { position: relative; display: flex; flex-direction: column; gap: 16px; }
+                .pd-img-group > img {
+                    width: 100%; height: auto; object-fit: cover; border-radius: 8px;
                     transition: filter 0.4s ease; filter: brightness(0.9);
                 }
-                .pd-img-group:hover img { filter: brightness(1); }
+                .pd-img-group > img:hover { filter: brightness(1); }
                 
                 .pd-img-full { display: grid; grid-template-columns: 1fr; gap: 16px; }
                 .pd-img-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -175,13 +175,22 @@ export default function Page() {
                     grid-column: 1 / -1; text-align: center;
                 }
 
-                /* 🌟 专门为单独手机屏幕设计的标签样式 */
-                .screen-compare { position: relative; overflow: hidden; border-radius: 12px; background: #1a1c23; padding: 24px; display: flex; justify-content: center; }
-                .screen-compare img { width: auto; max-height: 70vh; object-fit: contain; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border-radius: 32px; }
+                /* 🌟 核心修复：单屏卡片防溢出机制 */
+                .screen-compare { 
+                    position: relative; overflow: hidden; border-radius: 12px; 
+                    background: #1a1c23; padding: 24px; 
+                    display: flex; flex-wrap: wrap; gap: 16px; 
+                    justify-content: center; align-items: center; 
+                }
+                .screen-compare img { 
+                    width: auto; max-width: 100%; height: auto; max-height: 70vh; 
+                    object-fit: contain; box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
+                    border-radius: 16px; 
+                }
                 .img-caption-tag {
                     position: absolute; top: 16px; left: 16px;
                     background: rgba(255,255,255,0.1); backdrop-filter: blur(8px);
-                    padding: 4px 12px; border-radius: 20px;
+                    padding: 4px 12px; border-radius: 20px; z-index: 10;
                     font-family: 'Space Mono', monospace; font-size: 10px; color: var(--white); text-transform: uppercase; letter-spacing: 1px;
                 }
                 .tag-old { color: var(--gray-text); border: 1px solid rgba(255,255,255,0.2); }
@@ -237,7 +246,6 @@ export default function Page() {
 
             <section className="pd-hero scroll-reveal">
                 <div className="pd-hero-img">
-                    {/* ⚠️ TODO: 填入封面图路径 */}
                     <img src="/images/apollo/apollo-hero01.png" alt="Apollo ID Project Cover" />
                 </div>
 
@@ -307,13 +315,12 @@ export default function Page() {
                             </div>
                         </div>
                         <div className="pd-img-full pd-img-group scroll-reveal">
-                            {/* ⚠️ TODO: User Flow 截图 */}
                             <img src="/images/apollo/apollo-apps05.webp" alt="User Flow" />
                             <p className="pd-img-caption">Architecting the reservation flow from guest selection to confirmation.</p>
                         </div>
                     </div>
 
-                    {/* ── Section 03: System Construction (原先的 Design) ── */}
+                    {/* ── Section 03: System Construction ── */}
                     <div className="pd-section" data-num="03" data-label="Construction">
                         <div className="pd-text-block scroll-reveal">
                             <div className="pd-text-title">MVP</div>
@@ -324,19 +331,17 @@ export default function Page() {
                                 </p>
                             </div>
                         </div>
-                        <div className="pd-img-3col pd-img-group scroll-reveal">
-                            {/* ⚠️ TODO: MVP 初稿相关的几张单屏 */}
-                            <div className="screen-compare"><img src="/images/apollo/apollo-apps03.webp" alt="MVP 1" /></div>
-                            <div className="screen-compare"><img src="/images/apollo/apollo-apps04.webp" alt="MVP 2" /></div>
-                            <div className="screen-compare"><img src="/images/apollo/apollo-apps01.webp" alt="MVP 3" /></div>
+                        {/* 🌟 核心修复 1：长图回归全宽排版，不用 screen-compare 包裹 */}
+                        <div className="pd-img-full pd-img-group scroll-reveal">
+                            <img src="/images/apollo/apollo-apps03.webp" alt="MVP Iterations 1" />
+                            <img src="/images/apollo/apollo-apps04.webp" alt="MVP Iterations 2" />
+                            <img src="/images/apollo/apollo-apps01.webp" alt="MVP Iterations 3" />
                             <p className="pd-img-caption">Early MVP iterations exploring the core booking logic.</p>
                         </div>
                     </div>
 
-                    {/* ── 🌟 NEW! Section 04: UX/UI Evolution ── */}
+                    {/* ── Section 04: UX/UI Evolution ── */}
                     <div className="pd-section" data-num="04" data-label="Evolution">
-
-                        {/* 4.1 Membership Wallet */}
                         <div className="pd-text-block scroll-reveal">
                             <div className="pd-text-title">Visual Overhaul</div>
                             <div className="pd-text-content">
@@ -347,7 +352,6 @@ export default function Page() {
                             </div>
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            {/* ⚠️ TODO: 旧版首页 vs 新版堆叠 Wallet 首页 */}
                             <div className="screen-compare">
                                 <span className="img-caption-tag tag-old">OLD DESIGN</span>
                                 <img src="/images/apollo/apollo-oldui.png" alt="Old Membership UI" />
@@ -371,7 +375,6 @@ export default function Page() {
                             <p className="pd-img-caption">Wallet UI Redesign comparison (Before vs. After).</p>
                         </div>
 
-                        {/* 4.2 C-Side Flow */}
                         <div className="pd-text-block scroll-reveal">
                             <div className="pd-text-title">Consumer UX</div>
                             <div className="pd-text-content">
@@ -381,8 +384,8 @@ export default function Page() {
                                 </p>
                             </div>
                         </div>
-                        <div className="pd-img-4col pd-img-group scroll-reveal">
-                            {/* ⚠️ TODO: 4张预订流程的单屏 (选桌、确认、聊天、支付) */}
+                        {/* 🌟 核心修复 2：6张图换成 3列 网格，变成 3x2 排版 */}
+                        <div className="pd-img-3col pd-img-group scroll-reveal">
                             <div className="screen-compare"><img src="/images/apollo/apollo-new01.png" alt="Venue Page" /></div>
                             <div className="screen-compare"><img src="/images/apollo/apollo-new02.png" alt="Reservation Calendar" /></div>
                             <div className="screen-compare"><img src="/images/apollo/apollo-new03.png" alt="Select Date" /></div>
@@ -392,7 +395,6 @@ export default function Page() {
                             <p className="pd-img-caption">The finalized end-to-end consumer reservation journey.</p>
                         </div>
 
-                        {/* 4.3 B-Side HQ App */}
                         <div className="pd-text-block scroll-reveal">
                             <div className="pd-text-title">Venue Side (B2B)</div>
                             <div className="pd-text-content">
@@ -403,9 +405,9 @@ export default function Page() {
                             </div>
                         </div>
                         <div className="pd-img-2col pd-img-group scroll-reveal">
-                            {/* ⚠️ TODO: B端旧版 vs 新版 */}
                             <div className="screen-compare">
                                 <span className="img-caption-tag tag-old">OLD STAFF APP</span>
+                                {/* 🌟 核心修复 3：如果你把两张图放一起，加上 max-width 后它们会自动换行或居中，不会撑爆了 */}
                                 <img src="/images/apollo/apollo-oldtable01.png" alt="Old Venue Side" />
                                 <img src="/images/apollo/apollo-oldtable02.png" alt="Old Venue Side" />
                             </div>
@@ -416,7 +418,6 @@ export default function Page() {
                             </div>
                         </div>
 
-                        {/* 4.4 Web Omnichannel */}
                         <div className="pd-text-block scroll-reveal">
                             <div className="pd-text-title">Omnichannel</div>
                             <div className="pd-text-content">
@@ -426,12 +427,11 @@ export default function Page() {
                                 </p>
                             </div>
                         </div>
+                        {/* 🌟 核心修复 4：Web端直接放长图 */}
                         <div className="pd-img-full pd-img-group scroll-reveal">
-                            {/* ⚠️ TODO: Web 端的电脑/网页截图 */}
                             <img src="/images/apollo/apollo-web01.png" alt="Web Order Experience" />
                             <img src="/images/apollo/apollo-web02.png" alt="Web Order Experience" />
                         </div>
-
                     </div>
 
                     {/* ── Section 05: Result ── */}
@@ -439,20 +439,25 @@ export default function Page() {
                         <div className="pd-stat-row scroll-reveal">
                             <div className="pd-stat">
                                 <div className="stat-num">40%</div>
-                                <div className="stat-label">Increased User Retentions</div>
+                                <div className="stat-label">User Retention Boost</div>
                             </div>
                             <div className="pd-stat">
                                 <div className="stat-num">$2M</div>
-                                <div className="stat-label">Q4 2022 Transactions</div>
+                                <div className="stat-label">Q4 Transaction Vol.</div>
+                            </div>
+                            <div className="pd-stat">
+                                <div className="stat-num">Seed</div>
+                                <div className="stat-label">Successfully Funded</div>
                             </div>
                         </div>
 
                         <div className="pd-text-block scroll-reveal">
                             <div className="pd-text-title">Outcome</div>
                             <div className="pd-text-content">
-                                <h3>Measurable Success</h3>
+                                <h3>Elevating the Premium Experience</h3>
                                 <p>
-                                    Launched strategically ahead of the Seed round, the redesign drove immediate business impact. Within a single quarter, user retention increased by 40%, and the revamped visual ecosystem facilitated $2M in Q4 transaction volume—successfully cementing Apollo’s positioning as a premium lifestyle brand.                                </p>
+                                    Launched strategically ahead of the Seed round, the redesign drove immediate business impact. Within a single quarter, user retention increased by 40%, and the revamped visual ecosystem facilitated $2M in Q4 transaction volume—successfully cementing Apollo’s positioning as a premium lifestyle brand.
+                                </p>
                             </div>
                         </div>
                     </div>
