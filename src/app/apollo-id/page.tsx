@@ -394,6 +394,13 @@ export default function Page() {
                             <div className="screen-compare"><img src="/images/apollo/apollo-new06.gif" alt="Reservation Complete" /></div>
                             <p className="pd-img-caption">The finalized end-to-end consumer reservation journey.</p>
                         </div>
+                        <div className="pd-img-3col pd-img-group scroll-reveal">
+                            <div className="screen-compare"><img src="/images/apollo/apollo-notif01.png" alt="Chat" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/apollo-notif02.png" alt="Notification" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/apollo-notif03.png" alt="Pay Deposit" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/apollo-notif04.png" alt="Confirm Detail" /></div>
+                            <p className="pd-img-caption">Pay deposit with Apple Pay</p>
+                        </div>
 
                         <div className="pd-text-block scroll-reveal">
                             <div className="pd-text-title">Venue Side (B2B)</div>
