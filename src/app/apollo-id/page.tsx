@@ -308,7 +308,7 @@ export default function Page() {
                         </div>
                         <div className="pd-img-full pd-img-group scroll-reveal">
                             {/* ⚠️ TODO: User Flow 截图 */}
-                            <img src="/images/apollo/apollo-userflow.webp" alt="User Flow" />
+                            <img src="/images/apollo/apollo-apps05.webp" alt="User Flow" />
                             <p className="pd-img-caption">Architecting the reservation flow from guest selection to confirmation.</p>
                         </div>
                     </div>
@@ -326,9 +326,9 @@ export default function Page() {
                         </div>
                         <div className="pd-img-3col pd-img-group scroll-reveal">
                             {/* ⚠️ TODO: MVP 初稿相关的几张单屏 */}
-                            <div className="screen-compare"><img src="/images/apollo/mvp-01.png" alt="MVP 1" /></div>
-                            <div className="screen-compare"><img src="/images/apollo/mvp-02.png" alt="MVP 2" /></div>
-                            <div className="screen-compare"><img src="/images/apollo/mvp-03.png" alt="MVP 3" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/apollo-apps03.webp" alt="MVP 1" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/apollo-apps04.webp" alt="MVP 2" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/apollo-apps01.webp" alt="MVP 3" /></div>
                             <p className="pd-img-caption">Early MVP iterations exploring the core booking logic.</p>
                         </div>
                     </div>
@@ -350,12 +350,25 @@ export default function Page() {
                             {/* ⚠️ TODO: 旧版首页 vs 新版堆叠 Wallet 首页 */}
                             <div className="screen-compare">
                                 <span className="img-caption-tag tag-old">OLD DESIGN</span>
-                                <img src="/images/apollo/old-home.png" alt="Old Membership UI" />
+                                <img src="/images/apollo/apollo-oldui.png" alt="Old Membership UI" />
                             </div>
                             <div className="screen-compare">
                                 <span className="img-caption-tag tag-new">NEW WALLET UI</span>
-                                <img src="/images/apollo/new-home.png" alt="New Stacked Cards UI" />
+                                <img src="/images/apollo/apollo-newui.png" alt="New Stacked Cards UI" />
                             </div>
+                            <div className="screen-compare">
+                                <span className="img-caption-tag tag-new">NEW WALLET UI</span>
+                                <img src="/images/apollo/apollo-cardsupdate03.png" alt="New Stacked Cards UI" />
+                            </div>
+                            <div className="screen-compare">
+                                <span className="img-caption-tag tag-new">NEW WALLET UI</span>
+                                <img src="/images/apollo/apollo-cardsupdate01.png" alt="New Stacked Cards UI-Lightmode" />
+                            </div>
+                            <div className="screen-compare">
+                                <span className="img-caption-tag tag-new">NEW WALLET UI</span>
+                                <img src="/images/apollo/apollo-cardsupdate02.png" alt="New Stacked Cards UI-Darkmode" />
+                            </div>
+                            <p className="pd-img-caption">Wallet UI Redesign comparison (Before vs. After).</p>
                         </div>
 
                         {/* 4.2 C-Side Flow */}
@@ -370,10 +383,12 @@ export default function Page() {
                         </div>
                         <div className="pd-img-4col pd-img-group scroll-reveal">
                             {/* ⚠️ TODO: 4张预订流程的单屏 (选桌、确认、聊天、支付) */}
-                            <div className="screen-compare"><img src="/images/apollo/flow-1.png" alt="Select Table" /></div>
-                            <div className="screen-compare"><img src="/images/apollo/flow-2.png" alt="Confirm" /></div>
-                            <div className="screen-compare"><img src="/images/apollo/flow-3.png" alt="Chat Notification" /></div>
-                            <div className="screen-compare"><img src="/images/apollo/flow-4.png" alt="Deposit Pay" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/apollo-new01.png" alt="Venue Page" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/apollo-new02.png" alt="Reservation Calendar" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/apollo-new03.png" alt="Select Date" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/apollo-new04.png" alt="Select Time" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/apollo-new05.png" alt="Confirm Detail" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/apollo-new06.gif" alt="Reservation Complete" /></div>
                             <p className="pd-img-caption">The finalized end-to-end consumer reservation journey.</p>
                         </div>
 
@@ -391,11 +406,13 @@ export default function Page() {
                             {/* ⚠️ TODO: B端旧版 vs 新版 */}
                             <div className="screen-compare">
                                 <span className="img-caption-tag tag-old">OLD STAFF APP</span>
-                                <img src="/images/apollo/old-hq.png" alt="Old Venue Side" />
+                                <img src="/images/apollo/apollo-oldtable01.png" alt="Old Venue Side" />
+                                <img src="/images/apollo/apollo-oldtable02.png" alt="Old Venue Side" />
                             </div>
                             <div className="screen-compare">
                                 <span className="img-caption-tag tag-new">NEW APOLLO HQ</span>
-                                <img src="/images/apollo/new-hq.png" alt="New Venue Side" />
+                                <img src="/images/apollo/apollo-newtable01.png" alt="New Venue Side" />
+                                <img src="/images/apollo/apollo-newtable02.png" alt="New Venue Side" />
                             </div>
                         </div>
 
@@ -411,7 +428,8 @@ export default function Page() {
                         </div>
                         <div className="pd-img-full pd-img-group scroll-reveal">
                             {/* ⚠️ TODO: Web 端的电脑/网页截图 */}
-                            <img src="/images/apollo/web-order-mockup.jpg" alt="Web Order Experience" />
+                            <img src="/images/apollo/apollo-web01.png" alt="Web Order Experience" />
+                            <img src="/images/apollo/apollo-web02.png" alt="Web Order Experience" />
                         </div>
 
                     </div>
@@ -420,16 +438,12 @@ export default function Page() {
                     <div className="pd-section" data-num="05" data-label="Impact">
                         <div className="pd-stat-row scroll-reveal">
                             <div className="pd-stat">
-                                <div className="stat-num">100+</div>
-                                <div className="stat-label">Partner Venues</div>
+                                <div className="stat-num">40%</div>
+                                <div className="stat-label">Increased User Retentions</div>
                             </div>
                             <div className="pd-stat">
-                                <div className="stat-num">$47K</div>
-                                <div className="stat-label">Mo. Revenue (May '23)</div>
-                            </div>
-                            <div className="pd-stat">
-                                <div className="stat-num">56%</div>
-                                <div className="stat-label">MoM Revenue Growth</div>
+                                <div className="stat-num">$2M</div>
+                                <div className="stat-label">Q4 2022 Transactions</div>
                             </div>
                         </div>
 
@@ -438,8 +452,7 @@ export default function Page() {
                             <div className="pd-text-content">
                                 <h3>Measurable Success</h3>
                                 <p>
-                                    Reservations launched in early 2023. By May, member reservations were driving $47K in monthly app revenue with a 56% MoM growth rate, validating the unified ecosystem's impact on both user retention and venue operational efficiency.
-                                </p>
+                                    Launched strategically ahead of the Seed round, the redesign drove immediate business impact. Within a single quarter, user retention increased by 40%, and the revamped visual ecosystem facilitated $2M in Q4 transaction volume—successfully cementing Apollo’s positioning as a premium lifestyle brand.                                </p>
                             </div>
                         </div>
                     </div>
