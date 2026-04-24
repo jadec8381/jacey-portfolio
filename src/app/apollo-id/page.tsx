@@ -142,7 +142,6 @@ export default function Page() {
                 .pd-text-content p { font-size: 16px; line-height: 1.6; color: var(--gray-light); margin-bottom: 24px; }
                 .pd-text-content ul { font-size: 15px; line-height: 1.8; color: var(--gray-light); padding-left: 20px; margin-bottom: 24px; }
 
-                /* Highlight stat block */
                 .pd-stat-row {
                     display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;
                     border-top: 1px solid var(--rule-lt); border-bottom: 1px solid var(--rule-lt);
@@ -158,22 +157,35 @@ export default function Page() {
                     color: var(--gray-text); text-transform: uppercase; letter-spacing: 1px;
                 }
 
+                .pd-img-group { position: relative; }
                 .pd-img-group img {
                     width: 100%; height: 100%; object-fit: cover; border-radius: 4px;
                     transition: filter 0.4s ease; filter: brightness(0.9);
                 }
                 .pd-img-group:hover img { filter: brightness(1); }
+                
                 .pd-img-full { display: grid; grid-template-columns: 1fr; gap: 16px; }
                 .pd-img-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
                 .pd-img-3col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
-                .pd-img-2to1 { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
-                .pd-img-1to2 { display: grid; grid-template-columns: 1fr 2fr; gap: 16px; }
-                .pd-img-mixed { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-                .pd-img-mixed .img-span-full { grid-column: 1 / -1; }
+                .pd-img-4col { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+                
                 .pd-img-caption {
                     font-family: 'Barlow', sans-serif; font-size: 12px;
-                    color: var(--gray-text); margin-top: 8px; font-style: italic;
+                    color: var(--gray-text); margin-top: 12px; font-style: italic;
+                    grid-column: 1 / -1; text-align: center;
                 }
+
+                /* 🌟 专门为单独手机屏幕设计的标签样式 */
+                .screen-compare { position: relative; overflow: hidden; border-radius: 12px; background: #1a1c23; padding: 24px; display: flex; justify-content: center; }
+                .screen-compare img { width: auto; max-height: 70vh; object-fit: contain; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border-radius: 32px; }
+                .img-caption-tag {
+                    position: absolute; top: 16px; left: 16px;
+                    background: rgba(255,255,255,0.1); backdrop-filter: blur(8px);
+                    padding: 4px 12px; border-radius: 20px;
+                    font-family: 'Space Mono', monospace; font-size: 10px; color: var(--white); text-transform: uppercase; letter-spacing: 1px;
+                }
+                .tag-old { color: var(--gray-text); border: 1px solid rgba(255,255,255,0.2); }
+                .tag-new { color: #10B981; border: 1px solid rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.1); }
 
                 .pd-next {
                     padding: 80px 48px 0; border-top: 2px solid var(--rule);
@@ -195,7 +207,7 @@ export default function Page() {
                     .pd-meta-table { border-top: 2px solid var(--rule); }
                     .pd-body { grid-template-columns: 200px 1fr; gap: 40px; }
                     .pd-text-block { grid-template-columns: 1fr; gap: 16px; }
-                    .pd-img-3col { grid-template-columns: 1fr 1fr; }
+                    .pd-img-3col, .pd-img-4col { grid-template-columns: 1fr 1fr; }
                     .pd-stat-row { grid-template-columns: 1fr; gap: 32px; }
                 }
 
@@ -217,78 +229,41 @@ export default function Page() {
                     }
                     .mob-s-num { font-family: 'Oswald', sans-serif; font-size: 24px; font-weight: 700; color: var(--white); }
                     .mob-s-label { font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 600; text-transform: uppercase; color: var(--gray-light); letter-spacing: 1px; }
-                    .pd-img-2col, .pd-img-3col, .pd-img-2to1, .pd-img-1to2 { grid-template-columns: 1fr; }
+                    .pd-img-2col { grid-template-columns: 1fr; }
                     .pd-content { gap: 80px; }
+                    .screen-compare { padding: 16px; }
                 }
             `}</style>
 
-            {/* ══════════════════════════════
-                HERO
-                ══════════════════════════════ */}
             <section className="pd-hero scroll-reveal">
                 <div className="pd-hero-img">
-                    <img
-                        src="/images/apollo/apollo-hero01.png"
-                        alt="Apollo ID Project Cover"
-                    />
+                    {/* ⚠️ TODO: 填入封面图路径 */}
+                    <img src="/images/apollo/apollo-hero01.png" alt="Apollo ID Project Cover" />
                 </div>
 
                 <div className="pd-hero-info">
                     <div className="pd-title-wrap">
                         <h1>APOLLO ID</h1>
                         <p className="pd-title-summary">
-                            Designing an end-to-end table reservation system for
-                            NYC's premier venue membership loyalty platform —
-                            serving 100+ partner venues across restaurants,
-                            bars, and nightclubs.
+                            Designing an end-to-end table reservation system and visual ecosystem for NYC's premier venue membership platform.
                         </p>
                     </div>
 
                     <div className="pd-meta-table">
-                        <div className="pd-meta-row">
-                            <span className="mk">Client</span>
-                            <span className="mv">Apollo Technology</span>
-                        </div>
-                        <div className="pd-meta-row">
-                            <span className="mk">Role</span>
-                            <span className="mv">
-                                UI Designer & User Researcher
-                            </span>
-                        </div>
-                        <div className="pd-meta-row">
-                            <span className="mk">Duration</span>
-                            <span className="mv">July 2021 — August 2022</span>
-                        </div>
-                        <div className="pd-meta-row">
-                            <span className="mk">Scope</span>
-                            <span className="mv">
-                                User Research, Interface Design
-                            </span>
-                        </div>
-                        <div className="pd-meta-row">
-                            <span className="mk">Team</span>
-                            <span className="mv">
-                                Jacey Chen + Rainey Chak (Co-designer)
-                            </span>
-                        </div>
-                        <div className="pd-meta-row">
-                            <span className="mk">Tool</span>
-                            <span className="mv">Figma</span>
-                        </div>
+                        <div className="pd-meta-row"><span className="mk">Client</span><span className="mv">Apollo Technology</span></div>
+                        <div className="pd-meta-row"><span className="mk">Role</span><span className="mv">UI Designer & User Researcher</span></div>
+                        <div className="pd-meta-row"><span className="mk">Duration</span><span className="mv">July 2021 — August 2022</span></div>
+                        <div className="pd-meta-row"><span className="mk">Scope</span><span className="mv">End-to-end UX/UI, Design System</span></div>
+                        <div className="pd-meta-row"><span className="mk">Team</span><span className="mv">Jacey Chen + Rainey Chak</span></div>
                     </div>
                 </div>
             </section>
 
-            {/* ══════════════════════════════
-                BODY
-                ══════════════════════════════ */}
             <section className="pd-body">
                 <div className="pd-sidebar-col">
                     <div className="pd-sidebar-sticky">
                         <div className="pd-sticky-num">{activeSection.num}</div>
-                        <div className="pd-sticky-label">
-                            {activeSection.label}
-                        </div>
+                        <div className="pd-sticky-label">{activeSection.label}</div>
                     </div>
                 </div>
 
@@ -299,23 +274,13 @@ export default function Page() {
 
                 <div className="pd-content">
                     {/* ── Section 01: Overview ── */}
-                    <div
-                        className="pd-section"
-                        data-num="01"
-                        data-label="Overview"
-                    >
+                    <div className="pd-section" data-num="01" data-label="Overview">
                         <div className="pd-text-block scroll-reveal">
                             <div className="pd-text-title">About</div>
                             <div className="pd-text-content">
                                 <h3>The Venue Membership Platform</h3>
                                 <p>
-                                    Apollo ID is NYC's venue membership loyalty
-                                    app, connecting users to exclusive perks —
-                                    expedited entry, complimentary drinks, BOGO
-                                    deals — across 100+ partner restaurants,
-                                    bars, nightclubs, and karaoke lounges. Users
-                                    discover and book; venues manage members
-                                    through the companion Apollo HQ app.
+                                    Apollo ID connects users to exclusive perks—expedited entry, complimentary drinks, BOGO deals—across 100+ partner restaurants, bars, and nightclubs in NYC. Users discover and book; venues manage members through the companion Apollo HQ app.
                                 </p>
                             </div>
                         </div>
@@ -324,227 +289,135 @@ export default function Page() {
                             <div className="pd-text-content">
                                 <h3>Reservation Chaos</h3>
                                 <p>
-                                    Bar and nightclub partners were drowning in
-                                    reservation requests arriving through phone
-                                    calls, texts, emails, website forms, in-app
-                                    chat, and walk-ins — especially before
-                                    weekends. This fragmented workflow made it
-                                    nearly impossible for staff to track
-                                    availability or respond consistently. Both
-                                    venues and users were asking for a single,
-                                    unified booking channel inside the app.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="pd-text-block scroll-reveal">
-                            <div className="pd-text-title">Solution</div>
-                            <div className="pd-text-content">
-                                <h3>In-App Table Reservations</h3>
-                                <p>
-                                    A reservation feature enabling users to
-                                    request tables on specific dates, with
-                                    venues reviewing and acting on requests
-                                    (approve / deny) through Apollo HQ. Designed
-                                    for bar and nightclub partners first, then
-                                    expanded to restaurants.
+                                    Bar and nightclub partners were drowning in reservation requests arriving through fragmented channels (phone, texts, forms, walk-ins). It was nearly impossible for staff to track availability, while users demanded a unified in-app booking experience.
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     {/* ── Section 02: Research ── */}
-                    <div
-                        className="pd-section"
-                        data-num="02"
-                        data-label="Research"
-                    >
+                    <div className="pd-section" data-num="02" data-label="Research">
                         <div className="pd-text-block scroll-reveal">
-                            <div className="pd-text-title">
-                                Competitive Analysis
-                            </div>
+                            <div className="pd-text-title">Strategy</div>
                             <div className="pd-text-content">
                                 <h3>Crowded Landscape, Unique Position</h3>
                                 <p>
-                                    Analyzed OpenTable, Resy, SevenRooms, Tock,
-                                    and MiniTable to understand how reservation
-                                    platforms handle guest input, date/time
-                                    selection, and table availability display.
-                                    The insight: these platforms only do
-                                    reservations. Apollo ID's differentiator is
-                                    combining reservations with in-app ordering
-                                    and exclusive membership benefits —
-                                    positioning us as a one-stop venue
-                                    management solution.
+                                    While platforms like OpenTable and Resy focus strictly on reservations, Apollo ID's differentiator is combining bookings with in-app ordering and exclusive tier-based membership benefits. This required a UX that served both regular diners and VIP nightlife clientele.
                                 </p>
                             </div>
                         </div>
-                        <div className="pd-text-block scroll-reveal">
-                            <div className="pd-text-title">
-                                Stakeholder Interviews
-                            </div>
-                            <div className="pd-text-content">
-                                <h3>Learning the Business</h3>
-                                <p>
-                                    Partnered with the Account Executive
-                                    managing venue relationships to understand
-                                    how each venue type handles reservations
-                                    differently. Despite operational
-                                    differences, the core UX needed to remain
-                                    consistent across all venue types — a key
-                                    design constraint that shaped every
-                                    subsequent decision.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* User flow diagram placeholder */}
                         <div className="pd-img-full pd-img-group scroll-reveal">
-                            {/* TODO: 替换成你的 user flow 截图 */}
-                            <img
-                                src="/images/apollo/apollo-apps05.webp"
-                                alt="Apollo ID User Flow"
-                            />
-                            <p className="pd-img-caption">
-                                Reservation user flow — from guest count to
-                                confirmation
-                            </p>
-                        </div>
-
-                        <div className="pd-text-block scroll-reveal">
-                            <div className="pd-text-title">User Flow</div>
-                            <div className="pd-text-content">
-                                <h3>Step-by-Step on Mobile</h3>
-                                <p>
-                                    Embracing mobile-first constraints, I broke
-                                    the reservation flow into sequential screens
-                                    to avoid overwhelming users: guest count →
-                                    date & time → available tables → deposit
-                                    info → confirmation. Each step shows only
-                                    what's needed, keeping cognitive load low.
-                                </p>
-                            </div>
+                            {/* ⚠️ TODO: User Flow 截图 */}
+                            <img src="/images/apollo/apollo-userflow.webp" alt="User Flow" />
+                            <p className="pd-img-caption">Architecting the reservation flow from guest selection to confirmation.</p>
                         </div>
                     </div>
 
-                    {/* ── Section 03: Design ── */}
-                    <div
-                        className="pd-section"
-                        data-num="03"
-                        data-label="Design"
-                    >
+                    {/* ── Section 03: System Construction (原先的 Design) ── */}
+                    <div className="pd-section" data-num="03" data-label="Construction">
                         <div className="pd-text-block scroll-reveal">
-                            <div className="pd-text-title">MVP V1</div>
+                            <div className="pd-text-title">MVP</div>
                             <div className="pd-text-content">
-                                <h3>First Pass & Hard Questions</h3>
+                                <h3>Building the Foundation</h3>
                                 <p>
-                                    Presented initial screens to the team for
-                                    MVP scoping. The review surfaced critical
-                                    questions that pushed the design far beyond
-                                    the original scope:
-                                </p>
-                                <ul>
-                                    <li>
-                                        How do guests add notes or special
-                                        requests?
-                                    </li>
-                                    <li>
-                                        How do we tie reservations to individual
-                                        member identity?
-                                    </li>
-                                    <li>
-                                        How can group members find their table
-                                        location?
-                                    </li>
-                                    <li>
-                                        How do members invite friends to join a
-                                        table?
-                                    </li>
-                                    <li>
-                                        How do venues communicate with members
-                                        post-booking?
-                                    </li>
-                                    <li>
-                                        Where do pending/upcoming reservations
-                                        live in the app?
-                                    </li>
-                                    <li>
-                                        How do staff review and approve requests
-                                        in Apollo HQ?
-                                    </li>
-                                    <li>
-                                        How do we handle deposits and no-shows?
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        {/* MVP screens */}
-                        <div className="pd-img-full pd-img-group scroll-reveal">
-                            <img src="/images/apollo/apollo-apps02.webp" alt="Apollo Concept Screens" />
-                        </div>
-                        <div className="pd-img-full pd-img-group scroll-reveal">
-                            <img src="/images/apollo/apollo-apps01.webp" alt="Apollo MVP V1 Screen 1" />
-                        </div>
-
-                        <div className="pd-text-block scroll-reveal">
-                            <div className="pd-text-title">MVP Reiteration</div>
-                            <div className="pd-text-content">
-                                <h3>Addressing the Gaps</h3>
-                                <p>
-                                    Armed with these questions, I redesigned the
-                                    flow to address each gap. Key additions on
-                                    the consumer side: a "pending request"
-                                    status indicator, a special requests input
-                                    field, integration with the existing
-                                    notification system, and a streamlined
-                                    deposit flow. Complex features like adding
-                                    friends to reservations were intentionally
-                                    deferred to V2 to control scope.
-                                </p>
-                                <p>
-                                    On the venue side, designed new Apollo HQ
-                                    screens for staff to review, approve, and
-                                    manage incoming reservation requests — a
-                                    workflow that didn't exist before.
+                                    The initial MVP surfaced critical edge cases: handling deposits, tying bookings to member identities, and managing walk-in vs. app reservations. I collaborated closely with engineering to map the backend logic for state changes (Pending → Approved → Confirmed).
                                 </p>
                             </div>
                         </div>
-
-                        {/* Reiterated screens */}
-                        <div className="pd-img-full pd-img-group scroll-reveal">
-                            <img src="/images/apollo/apollo-apps06.webp" alt="Apollo Internal Feedback" />
-                        </div>
-                        <div className="pd-img-full pd-img-group scroll-reveal">
-                            <img src="/images/apollo/apollo-apps03.webp" alt="Apollo MVP 2 Screen 1" />
-                        </div>
-                        <div className="pd-img-full pd-img-group scroll-reveal">
-                            <img src="/images/apollo/apollo-apps04.webp" alt="Apollo MVP 2 Screen 2" />
-                        </div>
-
-                        <div className="pd-text-block scroll-reveal">
-                            <div className="pd-text-title">Implementation</div>
-                            <div className="pd-text-content">
-                                <h3>Collaborating with Engineering</h3>
-                                <p>
-                                    Entered a collaborative phase with the CTO /
-                                    lead engineer to build the feature. Beyond
-                                    UI implementation, this involved deep
-                                    discussions on backend logic: how
-                                    reservation states flow (pending → approved
-                                    → confirmed), deposit processing, and
-                                    notification triggers.
-                                </p>
-                            </div>
+                        <div className="pd-img-3col pd-img-group scroll-reveal">
+                            {/* ⚠️ TODO: MVP 初稿相关的几张单屏 */}
+                            <div className="screen-compare"><img src="/images/apollo/mvp-01.png" alt="MVP 1" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/mvp-02.png" alt="MVP 2" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/mvp-03.png" alt="MVP 3" /></div>
+                            <p className="pd-img-caption">Early MVP iterations exploring the core booking logic.</p>
                         </div>
                     </div>
 
-                    {/* ── Section 04: Result ── */}
-                    <div
-                        className="pd-section"
-                        data-num="04"
-                        data-label="Result"
-                    >
-                        {/* Impact stats */}
+                    {/* ── 🌟 NEW! Section 04: UX/UI Evolution ── */}
+                    <div className="pd-section" data-num="04" data-label="Evolution">
+
+                        {/* 4.1 Membership Wallet */}
+                        <div className="pd-text-block scroll-reveal">
+                            <div className="pd-text-title">Visual Overhaul</div>
+                            <div className="pd-text-content">
+                                <h3>From Clutter to Clarity</h3>
+                                <p>
+                                    The legacy membership screen suffered from visual noise—an unnecessary map background and bulky cards that required excessive scrolling. I redesigned it into a sleek, "wallet-style" stacked interface. By reducing banner heights, updating iconography, and establishing clear visual hierarchy, members can now instantly access their perks.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="pd-img-2col pd-img-group scroll-reveal">
+                            {/* ⚠️ TODO: 旧版首页 vs 新版堆叠 Wallet 首页 */}
+                            <div className="screen-compare">
+                                <span className="img-caption-tag tag-old">OLD DESIGN</span>
+                                <img src="/images/apollo/old-home.png" alt="Old Membership UI" />
+                            </div>
+                            <div className="screen-compare">
+                                <span className="img-caption-tag tag-new">NEW WALLET UI</span>
+                                <img src="/images/apollo/new-home.png" alt="New Stacked Cards UI" />
+                            </div>
+                        </div>
+
+                        {/* 4.2 C-Side Flow */}
+                        <div className="pd-text-block scroll-reveal">
+                            <div className="pd-text-title">Consumer UX</div>
+                            <div className="pd-text-content">
+                                <h3>Frictionless Booking Flow</h3>
+                                <p>
+                                    Embracing mobile-first constraints, I broke the reservation process into sequential screens to avoid overwhelming users. From selecting dates and party sizes to handling real-time chat notifications and Apple Pay deposits, every touchpoint is optimized for minimal cognitive load.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="pd-img-4col pd-img-group scroll-reveal">
+                            {/* ⚠️ TODO: 4张预订流程的单屏 (选桌、确认、聊天、支付) */}
+                            <div className="screen-compare"><img src="/images/apollo/flow-1.png" alt="Select Table" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/flow-2.png" alt="Confirm" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/flow-3.png" alt="Chat Notification" /></div>
+                            <div className="screen-compare"><img src="/images/apollo/flow-4.png" alt="Deposit Pay" /></div>
+                            <p className="pd-img-caption">The finalized end-to-end consumer reservation journey.</p>
+                        </div>
+
+                        {/* 4.3 B-Side HQ App */}
+                        <div className="pd-text-block scroll-reveal">
+                            <div className="pd-text-title">Venue Side (B2B)</div>
+                            <div className="pd-text-content">
+                                <h3>Empowering the Staff</h3>
+                                <p>
+                                    Consumer experience is only half the equation. I completely overhauled the venue-facing "Apollo HQ" app. The new Orders dashboard allows staff to instantly parse reservation statuses and manage table assignments with improved typography and intuitive color-coding.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="pd-img-2col pd-img-group scroll-reveal">
+                            {/* ⚠️ TODO: B端旧版 vs 新版 */}
+                            <div className="screen-compare">
+                                <span className="img-caption-tag tag-old">OLD STAFF APP</span>
+                                <img src="/images/apollo/old-hq.png" alt="Old Venue Side" />
+                            </div>
+                            <div className="screen-compare">
+                                <span className="img-caption-tag tag-new">NEW APOLLO HQ</span>
+                                <img src="/images/apollo/new-hq.png" alt="New Venue Side" />
+                            </div>
+                        </div>
+
+                        {/* 4.4 Web Omnichannel */}
+                        <div className="pd-text-block scroll-reveal">
+                            <div className="pd-text-title">Omnichannel</div>
+                            <div className="pd-text-content">
+                                <h3>Web Order Extension</h3>
+                                <p>
+                                    To support venues comprehensively, I translated our native design system to a responsive web platform. This allowed venues to seamlessly accept online orders and reservations directly from their own external websites while maintaining Apollo's backend ecosystem.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="pd-img-full pd-img-group scroll-reveal">
+                            {/* ⚠️ TODO: Web 端的电脑/网页截图 */}
+                            <img src="/images/apollo/web-order-mockup.jpg" alt="Web Order Experience" />
+                        </div>
+
+                    </div>
+
+                    {/* ── Section 05: Result ── */}
+                    <div className="pd-section" data-num="05" data-label="Impact">
                         <div className="pd-stat-row scroll-reveal">
                             <div className="pd-stat">
                                 <div className="stat-num">100+</div>
@@ -552,64 +425,28 @@ export default function Page() {
                             </div>
                             <div className="pd-stat">
                                 <div className="stat-num">$47K</div>
-                                <div className="stat-label">
-                                    Monthly Revenue (May '23)
-                                </div>
+                                <div className="stat-label">Mo. Revenue (May '23)</div>
                             </div>
                             <div className="pd-stat">
                                 <div className="stat-num">56%</div>
-                                <div className="stat-label">
-                                    MoM Revenue Growth
-                                </div>
+                                <div className="stat-label">MoM Revenue Growth</div>
                             </div>
                         </div>
 
                         <div className="pd-text-block scroll-reveal">
-                            <div className="pd-text-title">Launch</div>
+                            <div className="pd-text-title">Outcome</div>
                             <div className="pd-text-content">
-                                <h3>From Bars to Restaurants</h3>
+                                <h3>Measurable Success</h3>
                                 <p>
-                                    Reservations launched January 2023,
-                                    initially for bar and nightclub partners,
-                                    then expanding to restaurants. Member
-                                    reservations drove $30K in April 2023 and
-                                    $47K in May 2023 in app revenue — consistent
-                                    month-over-month growth that validated the
-                                    feature's impact on the business.
+                                    Reservations launched in early 2023. By May, member reservations were driving $47K in monthly app revenue with a 56% MoM growth rate, validating the unified ecosystem's impact on both user retention and venue operational efficiency.
                                 </p>
                             </div>
-                        </div>
-
-                        <div className="pd-text-block scroll-reveal">
-                            <div className="pd-text-title">Next Steps</div>
-                            <div className="pd-text-content">
-                                <h3>Social Layer Integration</h3>
-                                <p>
-                                    Planned V2 iterations include integrating
-                                    the social layer: members will be able to
-                                    add friends to existing reservations, split
-                                    deposits and payments within the app. These
-                                    features will be revisited as the platform's
-                                    social infrastructure matures.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Final showcase */}
-                        <div className="pd-img-full pd-img-group scroll-reveal">
-                            {/* TODO: 替换成最终 showcase 截图 */}
-                            <img
-                                src="/images/apollo/apollo-apps01.webp"
-                                alt="Apollo ID Final Showcase"
-                            />
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* ══════════════════════════════
-                NEXT PROJECT
-                ══════════════════════════════ */}
+            {/* ── NEXT PROJECT ── */}
             <Link href="/sanvo-website" className="pd-next scroll-reveal">
                 <div>
                     <div className="pd-next-label">Next Project</div>
